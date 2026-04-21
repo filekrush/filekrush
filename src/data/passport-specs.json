@@ -1,0 +1,90 @@
+{
+  "india": {
+    "country": "India",
+    "width": 51,
+    "height": 51,
+    "unit": "mm",
+    "dpi": 300,
+    "pxWidth": 600,
+    "pxHeight": 600,
+    "bgColor": "#ffffff",
+    "notes": "White background. Face should cover 70-80% of the frame."
+  },
+  "usa": {
+    "country": "United States",
+    "width": 51,
+    "height": 51,
+    "unit": "mm",
+    "dpi": 300,
+    "pxWidth": 600,
+    "pxHeight": 600,
+    "bgColor": "#ffffff",
+    "notes": "White background. Head height 25-35mm from chin to top of head."
+  },
+  "uk": {
+    "country": "United Kingdom",
+    "width": 35,
+    "height": 45,
+    "unit": "mm",
+    "dpi": 300,
+    "pxWidth": 413,
+    "pxHeight": 531,
+    "bgColor": "#ffffff",
+    "notes": "Light grey or white background. Head height 29-34mm."
+  },
+  "schengen": {
+    "country": "Schengen Visa",
+    "width": 35,
+    "height": 45,
+    "unit": "mm",
+    "dpi": 300,
+    "pxWidth": 413,
+    "pxHeight": 531,
+    "bgColor": "#ffffff",
+    "notes": "White or light grey background. Face should cover 70-80% of the frame."
+  },
+  "canada": {
+    "country": "Canada",
+    "width": 50,
+    "height": 70,
+    "unit": "mm",
+    "dpi": 300,
+    "pxWidth": 591,
+    "pxHeight": 827,
+    "bgColor": "#ffffff",
+    "notes": "White or light-coloured background. Face height 31-36mm."
+  },
+  "australia": {
+    "country": "Australia",
+    "width": 35,
+    "height": 45,
+    "unit": "mm",
+    "dpi": 300,
+    "pxWidth": 413,
+    "pxHeight": 531,
+    "bgColor": "#ffffff",
+    "notes": "White background. Head to chin 32-36mm."
+  },
+  "japan": {
+    "country": "Japan",
+    "width": 35,
+    "height": 45,
+    "unit": "mm",
+    "dpi": 300,
+    "pxWidth": 413,
+    "pxHeight": 531,
+    "bgColor": "#ffffff",
+    "notes": "White background. No head coverings unless for religious reasons."
+  },
+  "china": {
+    "country": "China",
+    "width": 33,
+    "height": 48,
+    "unit": "mm",
+    "dpi": 300,
+    "pxWidth": 390,
+    "pxHeight": 567,
+    "bgColor": "#ffffff",
+    "notes": "White background. Head height 28-33mm."
+  }
+}

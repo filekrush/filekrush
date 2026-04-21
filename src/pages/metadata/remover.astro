@@ -1,0 +1,24 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import ExifTool from '../../components/tools/ExifTool';
+---
+
+<ToolLayout
+  title="Remove EXIF Metadata From Photos Free Online | Filekrush"
+  description="Strip all hidden metadata from your photos — GPS location, camera info, timestamps. Runs in your browser, nothing is uploaded."
+  canonical="/metadata/remover"
+  heading="Remove Photo Metadata"
+  subheading="Strip GPS location and all hidden data from your photos."
+>
+  <ExifTool client:only="react" mode="remove" />
+
+  <Fragment slot="content">
+    <section class="prose prose-gray max-w-none">
+      <h2>What gets removed?</h2>
+      <p>All EXIF metadata is stripped, including GPS coordinates, camera make and model, lens information, date and time stamps, orientation data, and any other embedded information. The image itself is unchanged.</p>
+
+      <h2>When should you remove metadata?</h2>
+      <p>Before uploading photos to classifieds, forums, dating apps, social media, or any public platform. GPS data in photos has been used to track people's locations. Removing it takes one click and protects your privacy.</p>
+    </section>
+  </Fragment>
+</ToolLayout>

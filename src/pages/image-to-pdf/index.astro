@@ -1,0 +1,31 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import ImageToPdf from '../../components/tools/ImageToPdf';
+---
+
+<ToolLayout
+  title="Convert Images to PDF Free Online | Filekrush"
+  description="Convert one or multiple images to a PDF document. Choose page size, orientation, and layout. Runs in your browser — no upload."
+  canonical="/image-to-pdf"
+  heading="Image to PDF"
+  subheading="Convert images to PDF with custom layout — free, private, instant."
+>
+  <ImageToPdf client:only="react" />
+
+  <Fragment slot="content">
+    <section class="prose prose-gray max-w-none">
+      <h2>How it works</h2>
+      <ol>
+        <li><strong>Drop your images</strong> — add one or multiple images. Reorder by dragging.</li>
+        <li><strong>Choose settings</strong> — page size (A4, Letter, A5), orientation, and how images fit on the page.</li>
+        <li><strong>Download</strong> — your PDF is generated instantly in your browser.</li>
+      </ol>
+
+      <h2>Use cases</h2>
+      <p>Combine scanned documents into a single PDF. Create a photo booklet. Convert screenshots into a shareable document. Prepare image-based assignments for submission.</p>
+
+      <h2>Is it safe?</h2>
+      <p>Yes. All processing happens in your browser. Your images are never uploaded to any server.</p>
+    </section>
+  </Fragment>
+</ToolLayout>

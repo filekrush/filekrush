@@ -1,0 +1,24 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import ExifTool from '../../components/tools/ExifTool';
+---
+
+<ToolLayout
+  title="View Image EXIF Metadata Free Online | Filekrush"
+  description="View all hidden metadata in your photos — camera info, GPS location, timestamps. Runs in your browser, nothing is uploaded."
+  canonical="/metadata/viewer"
+  heading="EXIF Metadata Viewer"
+  subheading="See what hidden data is embedded in your photos."
+>
+  <ExifTool client:only="react" mode="view" />
+
+  <Fragment slot="content">
+    <section class="prose prose-gray max-w-none">
+      <h2>What is EXIF data?</h2>
+      <p>Every photo taken with a smartphone or digital camera contains hidden metadata called EXIF data. This includes the camera model, settings like aperture and shutter speed, the date and time the photo was taken, and often the exact GPS coordinates of where it was taken.</p>
+
+      <h2>Why should you check it?</h2>
+      <p>Before sharing photos online — on social media, forums, or marketplaces — it's worth checking what metadata is embedded. GPS coordinates can reveal your home address, workplace, or other private locations.</p>
+    </section>
+  </Fragment>
+</ToolLayout>
