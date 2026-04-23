@@ -40,3 +40,7 @@ body {
 .prose strong {
   color: var(--text-primary);
 }
+
+.prose h2 {
+  margin-top: 24px;
+}
