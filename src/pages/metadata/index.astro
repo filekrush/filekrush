@@ -1,0 +1,24 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import ExifTool from '../../components/tools/ExifTool';
+---
+
+<ToolLayout
+  title="EXIF Metadata Viewer & Remover Free Online | Filekrush"
+  description="View and remove hidden metadata from your photos. See GPS location, camera info, timestamps — then strip it all. Runs in your browser."
+  canonical="/metadata"
+  heading="Photo Metadata Tool"
+  subheading="View or remove hidden EXIF data from any photo — free, private, instant."
+>
+  <ExifTool client:only="react" mode="both" />
+
+  <Fragment slot="content">
+    <section class="prose prose-gray max-w-none">
+      <h2>What is EXIF metadata?</h2>
+      <p>Photos contain hidden data called EXIF metadata: camera model, lens, settings, date, time, and often GPS coordinates. This data is invisible when viewing the photo but can be extracted by anyone who has the file.</p>
+
+      <h2>Why does this matter?</h2>
+      <p>GPS coordinates in a photo taken at home reveal your home address. Photos taken at work reveal your workplace. Before sharing images publicly, check what data they contain and remove it if needed.</p>
+    </section>
+  </Fragment>
+</ToolLayout>

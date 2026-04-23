@@ -1,0 +1,24 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import PassportPhoto from '../../components/tools/PassportPhoto';
+---
+
+<ToolLayout
+  title="Indian Passport Photo Size — 51x51mm, 600x600px | Filekrush"
+  description="Create Indian passport size photos (51x51mm, 600x600px) instantly. White background, correct dimensions. Free, no upload."
+  canonical="/passport-photo/india"
+  heading="Indian Passport Photo"
+  subheading="51 × 51mm (600 × 600px) — white background, ready to submit."
+>
+  <PassportPhoto client:only="react" defaultCountry="india" />
+
+  <Fragment slot="content">
+    <section class="prose prose-gray max-w-none">
+      <h2>Indian passport photo requirements</h2>
+      <p>The Indian passport office requires photos measuring 51 × 51mm (2 × 2 inches) at 600 × 600 pixels. The background must be plain white, and your face should cover 70-80% of the frame. This tool ensures your photo meets these exact specifications.</p>
+
+      <h2>Where is this size used?</h2>
+      <p>Indian passport applications, Aadhaar card updates, PAN card applications, visa applications from India, and various government form submissions.</p>
+    </section>
+  </Fragment>
+</ToolLayout>

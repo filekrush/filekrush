@@ -1,0 +1,31 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import ResizeImage from '../../components/tools/ResizeImage';
+---
+
+<ToolLayout
+  title="Resize Image Online Free — Exact Dimensions | Filekrush"
+  description="Resize any image to exact pixel dimensions. Runs in your browser — no upload, no signup. Supports JPG, PNG, WebP."
+  canonical="/resize"
+  heading="Resize Image"
+  subheading="Resize to exact dimensions — free, private, instant."
+>
+  <ResizeImage client:only="react" />
+
+  <Fragment slot="content">
+    <section class="prose prose-gray max-w-none">
+      <h2>How it works</h2>
+      <ol>
+        <li><strong>Drop your image</strong> — supports JPG, PNG, and WebP files.</li>
+        <li><strong>Set dimensions</strong> — type exact pixels or pick a preset. Lock aspect ratio if needed.</li>
+        <li><strong>Download</strong> — your resized image is ready instantly.</li>
+      </ol>
+
+      <h2>Why resize images?</h2>
+      <p>Job applications, online forms, social media profiles, and e-commerce listings often require images at specific dimensions. Resizing to exact pixels ensures your image meets requirements without distortion.</p>
+
+      <h2>Is it safe?</h2>
+      <p>Yes. Everything runs in your browser. No files are uploaded to any server.</p>
+    </section>
+  </Fragment>
+</ToolLayout>

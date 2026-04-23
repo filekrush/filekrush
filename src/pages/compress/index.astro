@@ -1,0 +1,31 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import CompressImage from '../../components/tools/CompressImage';
+---
+
+<ToolLayout
+  title="Compress Image Online Free — Reduce File Size | Filekrush"
+  description="Compress any image to your target file size. Runs in your browser — no upload, no signup. Supports JPG, PNG, WebP."
+  canonical="/compress"
+  heading="Compress Image"
+  subheading="Reduce any image to your exact target size — free, private, instant."
+>
+  <CompressImage client:only="react" />
+
+  <Fragment slot="content">
+    <section class="prose prose-gray max-w-none">
+      <h2>How it works</h2>
+      <ol>
+        <li><strong>Drop your image</strong> — supports JPG, PNG, and WebP files up to 50MB.</li>
+        <li><strong>Set your target size</strong> — choose from presets or type an exact KB value.</li>
+        <li><strong>Download</strong> — your compressed image is ready instantly.</li>
+      </ol>
+
+      <h2>Why compress images?</h2>
+      <p>Many websites, government portals, and application forms have strict file size limits. Email attachments are often capped at a few MB. Compressed images load faster on websites, improving user experience and SEO performance.</p>
+
+      <h2>Is it safe?</h2>
+      <p>Yes. Filekrush processes everything in your browser. Your images are never uploaded to any server. Once you close the tab, the data is gone.</p>
+    </section>
+  </Fragment>
+</ToolLayout>

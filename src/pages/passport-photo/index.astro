@@ -1,0 +1,29 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import PassportPhoto from '../../components/tools/PassportPhoto';
+---
+
+<ToolLayout
+  title="Passport Photo Maker Free Online — All Countries | Filekrush"
+  description="Create passport photos for any country. Correct dimensions, white background. Runs in your browser — no upload."
+  canonical="/passport-photo"
+  heading="Passport Photo Maker"
+  subheading="Create passport photos for any country — correct size, white background, instant."
+>
+  <PassportPhoto client:only="react" />
+
+  <Fragment slot="content">
+    <section class="prose prose-gray max-w-none">
+      <h2>How it works</h2>
+      <ol>
+        <li><strong>Select your country</strong> — dimensions are set automatically.</li>
+        <li><strong>Drop your photo</strong> — any clear face photo works.</li>
+        <li><strong>Position the crop</strong> — drag to center your face in the frame.</li>
+        <li><strong>Download</strong> — your passport photo is ready at the exact required size.</li>
+      </ol>
+
+      <h2>Supported countries</h2>
+      <p>India (51×51mm), United States (51×51mm), United Kingdom (35×45mm), Schengen Visa (35×45mm), Canada (50×70mm), Australia (35×45mm), Japan (35×45mm), China (33×48mm). More countries coming soon.</p>
+    </section>
+  </Fragment>
+</ToolLayout>
