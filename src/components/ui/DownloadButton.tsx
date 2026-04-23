@@ -4,7 +4,7 @@ interface DownloadButtonProps {
   label?: string;
 }
 
-export default function DownloadButton({ blob, filename, label = 'Download' }: DownloadButtonProps) {
+export default function DownloadButton({ blob, filename, label = 'DOWNLOAD' }: DownloadButtonProps) {
   if (!blob) return null;
 
   const handleDownload = () => {
@@ -19,10 +19,8 @@ export default function DownloadButton({ blob, filename, label = 'Download' }: D
   return (
     <button
       onClick={handleDownload}
-      className="w-full sm:w-auto px-8 py-3 rounded-xl text-white font-semibold text-base transition-colors cursor-pointer"
-      style={{ backgroundColor: 'var(--accent)', }}
-      onMouseOver={(e) => (e.currentTarget.style.backgroundColor = 'var(--accent-hover)')}
-      onMouseOut={(e) => (e.currentTarget.style.backgroundColor = 'var(--accent)')}
+      className="px-6 py-2.5 text-[16px] text-white transition-opacity cursor-pointer hover:opacity-80"
+      style={{ backgroundColor: 'var(--btn-primary-bg)', color: 'var(--btn-primary-text)' }}
     >
       {label}
     </button>

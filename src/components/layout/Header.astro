@@ -1,34 +1,40 @@
 ---
 const navItems = [
-  { label: 'Compress', href: '/compress' },
-  { label: 'Resize', href: '/resize' },
-  { label: 'Convert', href: '/convert' },
-  { label: 'Passport Photo', href: '/passport-photo' },
-  { label: 'Image to PDF', href: '/image-to-pdf' },
-  { label: 'Metadata', href: '/metadata' },
+  { label: 'COMPRESS', href: '/compress' },
+  { label: 'RESIZE', href: '/resize' },
+  { label: 'CONVERT', href: '/convert' },
+  { label: 'PASSPORT PHOTO', href: '/passport-photo' },
+  { label: 'IMAGE TO PDF', href: '/image-to-pdf' },
+  { label: 'METADATA', href: '/metadata' },
 ];
+
+const currentPath = Astro.url.pathname;
 ---
 
-<header class="border-b border-gray-200 bg-white">
-  <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-    <!-- Logo -->
-    <a href="/" class="flex items-center gap-2 text-xl font-bold" style="color: var(--brand-primary);">
-      <span>filekrush</span>
+<header class="bg-[var(--bg)]">
+  <div class="max-w-[990px] mx-auto px-6 h-20 flex items-center justify-between">
+    <a href="/">
+      <img src="/logo.svg" alt="filekrush" class="h-[25px]" />
     </a>
 
-    <!-- Desktop Nav -->
-    <nav class="hidden md:flex items-center gap-6">
+    <nav class="hidden md:flex items-center gap-7">
       {navItems.map(item => (
-        <a href={item.href} class="text-sm text-gray-600 hover:text-gray-900 transition-colors">
+        <a
+          href={item.href}
+          class={`text-[16px] transition-colors ${
+            currentPath.startsWith(item.href)
+              ? 'underline underline-offset-4 text-[var(--text-primary)]'
+              : 'text-[var(--text-primary)] hover:text-[var(--text-secondary)]'
+          }`}
+        >
           {item.label}
         </a>
       ))}
     </nav>
 
-    <!-- Mobile Menu Button -->
     <button
       id="mobile-menu-btn"
-      class="md:hidden p-2 text-gray-600"
+      class="md:hidden p-2 text-[var(--text-primary)]"
       aria-label="Open menu"
     >
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -37,10 +43,16 @@ const navItems = [
     </button>
   </div>
 
-  <!-- Mobile Nav -->
-  <nav id="mobile-menu" class="md:hidden hidden border-t border-gray-200 bg-white px-4 pb-4">
+  <nav id="mobile-menu" class="md:hidden hidden bg-[var(--bg)] px-6 pb-6">
     {navItems.map(item => (
-      <a href={item.href} class="block py-2 text-sm text-gray-600 hover:text-gray-900">
+      <a
+        href={item.href}
+        class={`block py-2 text-[16px] ${
+          currentPath.startsWith(item.href)
+            ? 'underline underline-offset-4 text-[var(--text-primary)]'
+            : 'text-[var(--text-primary)]'
+        }`}
+      >
         {item.label}
       </a>
     ))}

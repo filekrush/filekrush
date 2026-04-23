@@ -24,7 +24,8 @@ export default function FileDropZone({
 
       const valid: File[] = [];
       for (const file of Array.from(files)) {
-        if (!accept.includes(file.type)) {
+        const isHeic = file.name.toLowerCase().endsWith('.heic') || file.name.toLowerCase().endsWith('.heif');
+        if (!isHeic && !accept.includes(file.type)) {
           setError(`Unsupported file type: ${file.name}`);
           return;
         }
@@ -59,16 +60,15 @@ export default function FileDropZone({
       onDragLeave={() => setIsDragging(false)}
       onDrop={handleDrop}
       className={`
-        relative cursor-pointer rounded-2xl border-2 border-dashed p-12
-        flex flex-col items-center justify-center gap-3 transition-all
+        relative cursor-pointer border-2 border-dashed p-16
+        flex flex-col items-center justify-center gap-4 transition-all
         ${isDragging
-          ? 'border-[var(--brand-primary)] bg-[var(--brand-light)]'
-          : 'border-gray-300 bg-gray-50 hover:border-gray-400 hover:bg-gray-100'
+          ? 'border-[var(--text-primary)] bg-[var(--brand-light)]'
+          : 'border-[#c0c0c0] bg-white hover:border-[var(--text-primary)]'
         }
       `}
     >
-      {/* Upload Icon */}
-      <svg className="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg className="w-12 h-12" style={{ color: 'var(--text-secondary)' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -78,16 +78,16 @@ export default function FileDropZone({
       </svg>
 
       <div className="text-center">
-        <p className="text-base font-medium text-gray-700">
+        <p className="text-[16px]" style={{ color: 'var(--text-primary)' }}>
           {isDragging ? 'Drop your file here' : 'Drop a file here or click to browse'}
         </p>
-        <p className="text-sm text-gray-400 mt-1">
+        <p className="text-[14px] mt-1" style={{ color: 'var(--text-secondary)' }}>
           {accept.filter((t) => t.includes('/')).map((t) => t.split('/')[1].toUpperCase()).join(', ')} — up to {maxSizeMB}MB
         </p>
       </div>
 
       {error && (
-        <p className="text-sm font-medium" style={{ color: 'var(--error)' }}>
+        <p className="text-[14px] font-medium" style={{ color: 'var(--error)' }}>
           {error}
         </p>
       )}
@@ -95,7 +95,7 @@ export default function FileDropZone({
       <input
         ref={inputRef}
         type="file"
-        accept={accept.join(',')}
+        accept={[...accept, '.heic', '.heif'].join(',')}
         multiple={multiple}
         className="hidden"
         onChange={(e) => validateAndSelect(e.target.files)}

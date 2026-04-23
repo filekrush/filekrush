@@ -2,12 +2,12 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const tools = [
-  { title: 'Compress Image', desc: 'Reduce image size to exact KB', href: '/compress', icon: '🗜️' },
-  { title: 'Resize Image', desc: 'Resize to exact dimensions', href: '/resize', icon: '📐' },
-  { title: 'Convert Format', desc: 'JPG, PNG, WebP conversion', href: '/convert', icon: '🔄' },
-  { title: 'Passport Photo', desc: 'Country-specific photo maker', href: '/passport-photo', icon: '📷' },
-  { title: 'Image to PDF', desc: 'Convert images to PDF', href: '/image-to-pdf', icon: '📄' },
-  { title: 'Metadata Tool', desc: 'View or remove EXIF data', href: '/metadata', icon: '🔒' },
+  { title: 'Compress Image', desc: 'Reduce image size to exact KB', href: '/compress', icon: '/icons/compress.svg' },
+  { title: 'Resize Image', desc: 'Resize to exact dimensions', href: '/resize', icon: '/icons/resize.svg' },
+  { title: 'Convert Format', desc: 'JPG, PNG, WebP conversion', href: '/convert', icon: '/icons/convert.svg' },
+  { title: 'Passport Photo', desc: 'Country-specific photo maker', href: '/passport-photo', icon: '/icons/passport.svg' },
+  { title: 'Image to PDF', desc: 'Convert images to PDF', href: '/image-to-pdf', icon: '/icons/pdf.svg' },
+  { title: 'Metadata Tool', desc: 'View or remove EXIF data', href: '/metadata', icon: '/icons/metadata.svg' },
 ];
 ---
 
@@ -16,34 +16,52 @@ const tools = [
   description="Compress, resize, convert images and more. Everything runs in your browser. No upload, no signup, no limits."
   canonical="/"
 >
-  <!-- Hero -->
-  <section class="py-16 sm:py-24 text-center px-4">
-    <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-      File tools that run in your browser.
+  <section class="max-w-[990px] mx-auto px-6 pt-16 sm:pt-24 pb-8">
+    <!-- Hero -->
+    <h1 class="text-5xl sm:text-[60px] font-semibold leading-tight flex flex-wrap items-center gap-x-3">
+      <img src="/icons/hero-1.svg" alt="" class="w-[49px] h-[49px] inline-block" />
+      <span>Compress</span>
+      <img src="/icons/hero-2.svg" alt="" class="w-[49px] h-[49px] inline-block" />
+      <span>Resize</span>
+      <img src="/icons/hero-3.svg" alt="" class="w-[49px] h-[49px] inline-block" />
+      <span>Convert</span>
+      <span>files in your browser.</span>
     </h1>
-    <p class="text-lg sm:text-xl text-gray-500 max-w-2xl mx-auto mb-2">
-      Compress, resize, convert. No uploads. No signups. Instant results.
-    </p>
-    <p class="text-sm text-gray-400">
-      Your files never leave your device.
+
+    <p class="text-2xl sm:text-[36px] mt-4" style="color: var(--text-secondary);">
+      No Uploads. No Signups.
     </p>
   </section>
 
   <!-- Tool Grid -->
-  <section class="max-w-4xl mx-auto px-4 pb-20">
+  <section class="max-w-[990px] mx-auto px-6 pb-20 pt-10">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       {tools.map(tool => (
         <a
           href={tool.href}
-          class="group block p-6 rounded-2xl border border-gray-200 hover:border-[var(--brand-primary)] hover:shadow-md transition-all"
+          class="group block bg-[var(--bg-card)] px-6 py-8 transition-all duration-200 hover:bg-[var(--bg-card-hover)]"
         >
-          <div class="text-3xl mb-3">{tool.icon}</div>
-          <h2 class="text-lg font-semibold text-gray-900 group-hover:text-[var(--brand-primary)] transition-colors">
-            {tool.title}
-          </h2>
-          <p class="text-sm text-gray-500 mt-1">{tool.desc}</p>
+          <div class="flex flex-col gap-13">
+            <img
+              src={tool.icon}
+              alt=""
+              class="w-[60px] h-[60px]"
+            />
+            <div>
+              <h2 class="text-[24px] text-[var(--text-primary)] group-hover:text-[var(--text-inverse)] transition-colors duration-200">
+                {tool.title}
+              </h2>
+              <p class="text-[16px] text-[var(--text-secondary)] group-hover:text-[var(--text-secondary)] transition-colors duration-200">
+                {tool.desc}
+              </p>
+            </div>
+          </div>
         </a>
       ))}
     </div>
+
+    <p class="text-[36px] mt-10" style="color: var(--text-secondary);">
+      Your files never leave your device.
+    </p>
   </section>
 </BaseLayout>
