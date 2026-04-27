@@ -1,0 +1,37 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import CompressImage from '../../components/tools/CompressImage';
+---
+
+<ToolLayout
+  title="Compress Image for Website — Optimize for Web Free | Filekrush"
+  description="Compress images for faster website loading. Optimize photos for blogs, e-commerce, and web pages. No upload, runs in your browser."
+  canonical="/compress/for-website"
+  heading="Compress Image for Website"
+  subheading="Optimize images for faster page loads — free, private, instant."
+>
+  <CompressImage client:only="react" defaultTargetKB={200} />
+
+  <Fragment slot="content">
+    <section class="prose prose-gray max-w-none">
+      <h2>Why optimize images for web?</h2>
+      <p>Images are typically the heaviest elements on a web page. Unoptimized photos can be 3-10MB each, making pages slow to load. Google uses page speed as a ranking factor, and slow-loading pages lose visitors. Compressing images to 100-300KB maintains visual quality while dramatically improving load times.</p>
+
+      <h2>Recommended sizes for web</h2>
+      <ol>
+        <li><strong>Hero/banner images</strong> — 200-400KB</li>
+        <li><strong>Blog post images</strong> — 100-200KB</li>
+        <li><strong>Product photos</strong> — 100-300KB</li>
+        <li><strong>Thumbnails</strong> — 20-50KB</li>
+        <li><strong>Icons and logos</strong> — under 20KB (use SVG when possible)</li>
+      </ol>
+
+      <h2>How it works</h2>
+      <ol>
+        <li><strong>Drop your image</strong> — supports JPG, PNG, and WebP.</li>
+        <li><strong>Set target size</strong> — pre-set to 200KB for general web use. Adjust as needed.</li>
+        <li><strong>Download</strong> — upload the optimized image to your website.</li>
+      </ol>
+    </section>
+  </Fragment>
+</ToolLayout>

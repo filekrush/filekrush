@@ -1,0 +1,31 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import CompressImage from '../../components/tools/CompressImage';
+---
+
+<ToolLayout
+  title="Compress Image for Email Attachment Free | Filekrush"
+  description="Compress images to email-friendly sizes. Reduce photos to fit Gmail, Outlook, and Yahoo attachment limits. No upload, runs in your browser."
+  canonical="/compress/for-email"
+  heading="Compress Image for Email"
+  subheading="Reduce images to fit email attachment limits — free, private, instant."
+>
+  <CompressImage client:only="react" defaultTargetKB={500} />
+
+  <Fragment slot="content">
+    <section class="prose prose-gray max-w-none">
+      <h2>Email attachment limits</h2>
+      <p>Gmail allows up to 25MB per email, but recipients on slower connections struggle with large attachments. Outlook caps at 20MB. Yahoo allows 25MB. For smooth delivery and fast downloading, keeping images under 500KB each is recommended, especially when sending multiple photos.</p>
+
+      <h2>How it works</h2>
+      <ol>
+        <li><strong>Drop your image</strong> — supports JPG, PNG, and WebP files.</li>
+        <li><strong>Target is pre-set to 500KB</strong> — ideal for email. Adjust if needed.</li>
+        <li><strong>Download</strong> — attach the compressed image to your email.</li>
+      </ol>
+
+      <h2>Is my file uploaded anywhere?</h2>
+      <p>No. Filekrush compresses your image entirely in your browser. Nothing is uploaded to any server.</p>
+    </section>
+  </Fragment>
+</ToolLayout>

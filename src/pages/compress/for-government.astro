@@ -1,0 +1,39 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import CompressImage from '../../components/tools/CompressImage';
+---
+
+<ToolLayout
+  title="Compress Photo for Government Form Free Online | Filekrush"
+  description="Compress photos to meet government form upload limits. Works for passport, Aadhaar, PAN, visa, and exam applications. No upload, runs in your browser."
+  canonical="/compress/for-government"
+  heading="Compress Photo for Government Form"
+  subheading="Reduce photos to meet government portal upload limits — free, private, instant."
+>
+  <CompressImage client:only="react" defaultTargetKB={100} />
+
+  <Fragment slot="content">
+    <section class="prose prose-gray max-w-none">
+      <h2>Common government form photo limits</h2>
+      <p>Government portals across India and other countries enforce strict photo upload limits. Here are common requirements:</p>
+      <ol>
+        <li><strong>Indian Passport (PSK)</strong> — photo under 300KB, signature under 80KB</li>
+        <li><strong>Aadhaar update</strong> — photo under 50KB</li>
+        <li><strong>SSC/RRB exam forms</strong> — photo 20-50KB, signature 10-20KB</li>
+        <li><strong>UPSC applications</strong> — photo under 300KB</li>
+        <li><strong>PAN card application</strong> — photo under 50KB</li>
+        <li><strong>Visa applications</strong> — varies by country, typically 100-500KB</li>
+      </ol>
+
+      <h2>How it works</h2>
+      <ol>
+        <li><strong>Drop your photo</strong> — supports JPG, PNG, and WebP.</li>
+        <li><strong>Set the exact size limit</strong> — pre-set to 100KB, adjust to match your form's requirement.</li>
+        <li><strong>Download</strong> — your photo is ready to upload to the government portal.</li>
+      </ol>
+
+      <h2>Is it safe?</h2>
+      <p>Yes. Your photo is processed entirely in your browser. No data is sent to any server. This is especially important for identity documents and government submissions.</p>
+    </section>
+  </Fragment>
+</ToolLayout>

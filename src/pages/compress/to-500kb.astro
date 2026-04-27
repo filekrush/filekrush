@@ -1,0 +1,31 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import CompressImage from '../../components/tools/CompressImage';
+---
+
+<ToolLayout
+  title="Compress Image to 500KB Free Online | Filekrush"
+  description="Compress any image to 500KB or less. Perfect for email attachments and web uploads. No upload, runs in your browser."
+  canonical="/compress/to-500kb"
+  heading="Compress Image to 500KB"
+  subheading="Reduce any image to 500KB or less — free, private, instant."
+>
+  <CompressImage client:only="react" defaultTargetKB={500} />
+
+  <Fragment slot="content">
+    <section class="prose prose-gray max-w-none">
+      <h2>Why 500KB?</h2>
+      <p>500KB is a sweet spot for high-quality images that need to stay lightweight. Many email providers flag or reject attachments over a few MB. Blog posts and web pages load significantly faster when images are kept under 500KB. E-commerce platforms often recommend product images at or below this size.</p>
+
+      <h2>How it works</h2>
+      <ol>
+        <li><strong>Drop your image</strong> — supports JPG, PNG, and WebP files.</li>
+        <li><strong>Target is pre-set to 500KB</strong> — adjust if needed.</li>
+        <li><strong>Download</strong> — your image is compressed to 500KB or less.</li>
+      </ol>
+
+      <h2>Is my file uploaded anywhere?</h2>
+      <p>No. Everything runs locally in your browser.</p>
+    </section>
+  </Fragment>
+</ToolLayout>

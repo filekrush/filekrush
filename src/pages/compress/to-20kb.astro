@@ -1,0 +1,31 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import CompressImage from '../../components/tools/CompressImage';
+---
+
+<ToolLayout
+  title="Compress Image to 20KB Free Online | Filekrush"
+  description="Compress any image to 20KB or less. Perfect for government forms, online applications, and ID submissions. No upload, runs in your browser."
+  canonical="/compress/to-20kb"
+  heading="Compress Image to 20KB"
+  subheading="Reduce any image to 20KB or less — free, private, instant."
+>
+  <CompressImage client:only="react" defaultTargetKB={20} />
+
+  <Fragment slot="content">
+    <section class="prose prose-gray max-w-none">
+      <h2>Why 20KB?</h2>
+      <p>Some government portals and online application forms enforce very strict file size limits as low as 20KB. Common examples include Indian railway recruitment boards (RRB), SSC exam applications, UPSC photo uploads, and certain state government job portals. This tool compresses your image to fit within 20KB while preserving as much quality as possible.</p>
+
+      <h2>How it works</h2>
+      <ol>
+        <li><strong>Drop your image</strong> — supports JPG, PNG, and WebP files.</li>
+        <li><strong>Target is pre-set to 20KB</strong> — adjust if needed.</li>
+        <li><strong>Download</strong> — your image is compressed to 20KB or less.</li>
+      </ol>
+
+      <h2>Will the quality be affected?</h2>
+      <p>At 20KB, some quality loss is expected, especially for large photos. The tool automatically scales down dimensions and adjusts compression to find the best balance between size and visual quality.</p>
+    </section>
+  </Fragment>
+</ToolLayout>

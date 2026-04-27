@@ -1,0 +1,31 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import CompressImage from '../../components/tools/CompressImage';
+---
+
+<ToolLayout
+  title="Compress Image to 1MB Free Online | Filekrush"
+  description="Compress any image to 1MB or less. Ideal for email attachments and document uploads. No upload, runs in your browser."
+  canonical="/compress/to-1mb"
+  heading="Compress Image to 1MB"
+  subheading="Reduce any image to 1MB or less — free, private, instant."
+>
+  <CompressImage client:only="react" defaultTargetKB={1024} />
+
+  <Fragment slot="content">
+    <section class="prose prose-gray max-w-none">
+      <h2>Why 1MB?</h2>
+      <p>Many platforms and email providers have attachment limits between 2-10MB. Compressing images to 1MB ensures they fit comfortably within these limits while maintaining good visual quality. Document management systems, HR portals, and insurance claim forms frequently set 1MB as their upload ceiling.</p>
+
+      <h2>How it works</h2>
+      <ol>
+        <li><strong>Drop your image</strong> — supports JPG, PNG, and WebP files.</li>
+        <li><strong>Target is pre-set to 1MB (1024KB)</strong> — adjust if needed.</li>
+        <li><strong>Download</strong> — your image is compressed to 1MB or less.</li>
+      </ol>
+
+      <h2>Is my file uploaded anywhere?</h2>
+      <p>No. Everything runs locally in your browser. Your files never leave your device.</p>
+    </section>
+  </Fragment>
+</ToolLayout>

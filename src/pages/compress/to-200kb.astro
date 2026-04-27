@@ -1,0 +1,31 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import CompressImage from '../../components/tools/CompressImage';
+---
+
+<ToolLayout
+  title="Compress Image to 200KB Free Online | Filekrush"
+  description="Compress any image to 200KB or less. Great for web uploads, profile photos, and email attachments. No upload, runs in your browser."
+  canonical="/compress/to-200kb"
+  heading="Compress Image to 200KB"
+  subheading="Reduce any image to 200KB or less — free, private, instant."
+>
+  <CompressImage client:only="react" defaultTargetKB={200} />
+
+  <Fragment slot="content">
+    <section class="prose prose-gray max-w-none">
+      <h2>Why 200KB?</h2>
+      <p>200KB is a common upper limit for profile photos on professional networking sites, e-commerce seller portals, and many web application forms. It provides a good balance between image quality and fast loading times.</p>
+
+      <h2>How it works</h2>
+      <ol>
+        <li><strong>Drop your image</strong> — supports JPG, PNG, and WebP files.</li>
+        <li><strong>Target is pre-set to 200KB</strong> — adjust if needed.</li>
+        <li><strong>Download</strong> — your image is compressed to 200KB or less.</li>
+      </ol>
+
+      <h2>Is my file uploaded anywhere?</h2>
+      <p>No. Filekrush processes everything in your browser. Your images stay on your device.</p>
+    </section>
+  </Fragment>
+</ToolLayout>

@@ -1,0 +1,31 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import CompressImage from '../../components/tools/CompressImage';
+---
+
+<ToolLayout
+  title="Compress Image to 50KB Free Online | Filekrush"
+  description="Compress any image to 50KB or less. Ideal for exam applications, ID photos, and form submissions. No upload, runs in your browser."
+  canonical="/compress/to-50kb"
+  heading="Compress Image to 50KB"
+  subheading="Reduce any image to 50KB or less — free, private, instant."
+>
+  <CompressImage client:only="react" defaultTargetKB={50} />
+
+  <Fragment slot="content">
+    <section class="prose prose-gray max-w-none">
+      <h2>Why 50KB?</h2>
+      <p>Many competitive exam portals and government websites require photos and signature scans under 50KB. This includes IBPS banking exams, SSC applications, state PSC forms, and university admission portals across India and other countries.</p>
+
+      <h2>How it works</h2>
+      <ol>
+        <li><strong>Drop your image</strong> — supports JPG, PNG, and WebP files.</li>
+        <li><strong>Target is pre-set to 50KB</strong> — adjust if needed.</li>
+        <li><strong>Download</strong> — your image is compressed to 50KB or less.</li>
+      </ol>
+
+      <h2>Is my file uploaded anywhere?</h2>
+      <p>No. Everything runs in your browser. Your image never leaves your device.</p>
+    </section>
+  </Fragment>
+</ToolLayout>
