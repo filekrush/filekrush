@@ -3,8 +3,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const tools = [
   { title: 'Compress Image', desc: 'Reduce image size to exact KB', href: '/compress', icon: '/icons/compress.svg' },
+  { title: 'Compress PDF', desc: 'Reduce PDF file size', href: '/compress-pdf', icon: '/icons/pdf.svg' },
   { title: 'Resize Image', desc: 'Resize to exact dimensions', href: '/resize', icon: '/icons/resize.svg' },
-  { title: 'Convert Format', desc: 'JPG, PNG, WebP conversion', href: '/convert', icon: '/icons/convert.svg' },
+  { title: 'Convert Format', desc: 'JPG, PNG, WebP, HEIC conversion', href: '/convert', icon: '/icons/convert.svg' },
   { title: 'Passport Photo', desc: 'Country-specific photo maker', href: '/passport-photo', icon: '/icons/passport.svg' },
   { title: 'Image to PDF', desc: 'Convert images to PDF', href: '/image-to-pdf', icon: '/icons/pdf.svg' },
   { title: 'Metadata Tool', desc: 'View or remove EXIF data', href: '/metadata', icon: '/icons/metadata.svg' },
@@ -13,11 +14,10 @@ const tools = [
 
 <BaseLayout
   title="Filekrush — Free Browser-Based File Tools"
-  description="Compress, resize, convert images and more. Everything runs in your browser. No upload, no signup, no limits."
+  description="Compress, resize, convert images and PDFs. Everything runs in your browser. No upload, no signup, no limits."
   canonical="/"
 >
   <section class="max-w-[990px] mx-auto px-6 pt-8 sm:pt-24 pb-4 sm:pb-8">
-    <!-- Hero -->
     <h1 class="text-[36px] sm:text-[60px] font-semibold leading-tight flex flex-wrap items-center gap-x-3 sm:gap-x-5">
       <img src="/icons/hero-1.svg" alt="" class="w-[30px] h-[30px] sm:w-[49px] sm:h-[49px] inline-block" />
       <span>Compress</span>
@@ -33,7 +33,6 @@ const tools = [
     </p>
   </section>
 
-  <!-- Tool Grid -->
   <section class="max-w-[990px] mx-auto px-6 pb-20 pt-4 sm:pt-10">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       {tools.map(tool => (

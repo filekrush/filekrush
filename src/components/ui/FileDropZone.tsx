@@ -25,7 +25,8 @@ export default function FileDropZone({
       const valid: File[] = [];
       for (const file of Array.from(files)) {
         const isHeic = file.name.toLowerCase().endsWith('.heic') || file.name.toLowerCase().endsWith('.heif');
-        if (!isHeic && !accept.includes(file.type)) {
+const isPdf = file.name.toLowerCase().endsWith('.pdf');
+if (!isHeic && !isPdf && !accept.includes(file.type)) {
           setError(`Unsupported file type: ${file.name}`);
           return;
         }

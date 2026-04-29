@@ -1,0 +1,31 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import CompressPdf from '../../components/tools/CompressPdf.tsx';
+---
+
+<ToolLayout
+  title="Compress PDF Free Online — Reduce PDF File Size | Filekrush"
+  description="Compress PDF files to reduce file size. Works best on scanned documents and image-heavy PDFs. No upload, runs in your browser."
+  canonical="/compress-pdf"
+  heading="Compress PDF"
+  subheading="Reduce PDF file size — free, private, instant."
+>
+  <CompressPdf client:only="react" />
+
+  <Fragment slot="content">
+    <section class="prose prose-gray max-w-none">
+      <h2>How it works</h2>
+      <ol>
+        <li><strong>Drop your PDF</strong> — supports any PDF file up to 50MB.</li>
+        <li><strong>Choose compression level</strong> — Maximum for smallest size, Balanced for most uses, Light for best quality.</li>
+        <li><strong>Download</strong> — your compressed PDF is ready instantly.</li>
+      </ol>
+
+      <h2>What gets compressed?</h2>
+      <p>This tool re-encodes the images embedded inside your PDF at lower quality and smaller dimensions. It works best on scanned documents, photo-heavy PDFs, and documents with large embedded images. Text-only PDFs may see little to no size reduction.</p>
+
+      <h2>Is it safe?</h2>
+      <p>Yes. Your PDF is processed entirely in your browser. The file never leaves your device. No server, no storage, no tracking.</p>
+    </section>
+  </Fragment>
+</ToolLayout>

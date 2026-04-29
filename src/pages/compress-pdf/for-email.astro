@@ -1,0 +1,24 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import CompressPdf from '../../components/tools/CompressPdf.tsx';
+---
+
+<ToolLayout
+  title="Compress PDF for Email Free Online | Filekrush"
+  description="Compress PDF to fit email attachment limits. Reduce scanned documents and image-heavy PDFs. No upload, runs in your browser."
+  canonical="/compress-pdf/for-email"
+  heading="Compress PDF for Email"
+  subheading="Reduce PDF size to fit email attachment limits — free, private, instant."
+>
+  <CompressPdf client:only="react" defaultLevel="low" />
+
+  <Fragment slot="content">
+    <section class="prose prose-gray max-w-none">
+      <h2>Email attachment limits</h2>
+      <p>Gmail allows 25MB, Outlook 20MB, Yahoo 25MB. But large PDFs are slow to send and download. For smooth delivery, keeping PDFs under 5MB is recommended. Scanned documents can easily be 10-50MB — this tool helps bring them down to email-friendly sizes.</p>
+
+      <h2>Best results</h2>
+      <p>This tool works best on scanned documents, photographed paperwork, and PDFs with embedded images. Text-only PDFs are already small and may not compress further.</p>
+    </section>
+  </Fragment>
+</ToolLayout>
