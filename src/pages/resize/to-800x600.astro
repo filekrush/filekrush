@@ -1,0 +1,21 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import ResizeImage from '../../components/tools/ResizeImage';
+---
+
+<ToolLayout
+  title="Resize Image to 800x600 Pixels Free Online | Filekrush"
+  description="Resize any image to 800x600 pixels. Standard web image size. No upload, runs in your browser."
+  canonical="/resize/to-800x600"
+  heading="Resize Image to 800×600"
+  subheading="Resize to 800×600 pixels — free, private, instant."
+>
+  <ResizeImage client:only="react" defaultWidth={800} defaultHeight={600} />
+
+  <Fragment slot="content">
+    <section class="prose prose-gray max-w-none">
+      <h2>Why 800×600?</h2>
+      <p>800×600 is a standard size for web images, blog content, and email newsletters. It provides good detail while keeping file sizes manageable. Many content management systems and website templates use this as the default image container width.</p>
+    </section>
+  </Fragment>
+</ToolLayout>

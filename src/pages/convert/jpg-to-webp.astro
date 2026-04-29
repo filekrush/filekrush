@@ -1,0 +1,24 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import ConvertFormat from '../../components/tools/ConvertFormat';
+---
+
+<ToolLayout
+  title="Convert JPG to WebP Free Online | Filekrush"
+  description="Convert JPG images to WebP for smaller file sizes and faster web loading. No upload, runs in your browser."
+  canonical="/convert/jpg-to-webp"
+  heading="Convert JPG to WebP"
+  subheading="Convert your JPG to WebP format — free, private, instant."
+>
+  <ConvertFormat client:only="react" fromFormat="image/jpeg" toFormat="image/webp" />
+
+  <Fragment slot="content">
+    <section class="prose prose-gray max-w-none">
+      <h2>Why convert JPG to WebP?</h2>
+      <p>WebP produces files 25-35% smaller than JPG at the same visual quality. This makes it the preferred format for websites, blogs, and e-commerce stores where page speed matters. All modern browsers support WebP.</p>
+
+      <h2>When to stick with JPG?</h2>
+      <p>If you need maximum compatibility with older software, email clients, or print services, JPG is still the safer choice. Some image editing tools and social media platforms may not accept WebP uploads.</p>
+    </section>
+  </Fragment>
+</ToolLayout>

@@ -1,0 +1,21 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import ResizeImage from '../../components/tools/ResizeImage';
+---
+
+<ToolLayout
+  title="Resize Image to 1080x1080 Pixels Free Online | Filekrush"
+  description="Resize any image to 1080x1080 pixels. Perfect for Instagram posts. No upload, runs in your browser."
+  canonical="/resize/to-1080x1080"
+  heading="Resize Image to 1080×1080"
+  subheading="Resize to 1080×1080 pixels — free, private, instant."
+>
+  <ResizeImage client:only="react" defaultWidth={1080} defaultHeight={1080} />
+
+  <Fragment slot="content">
+    <section class="prose prose-gray max-w-none">
+      <h2>Why 1080×1080?</h2>
+      <p>1080×1080 is the standard Instagram square post size. Using the correct dimensions ensures your photos display sharp and without cropping on Instagram feeds. It's also commonly used for Facebook posts and other social media platforms.</p>
+    </section>
+  </Fragment>
+</ToolLayout>

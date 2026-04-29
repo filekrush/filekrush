@@ -1,0 +1,24 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import PassportPhoto from '../../components/tools/PassportPhoto';
+---
+
+<ToolLayout
+  title="Canadian Passport Photo Size — 50x70mm Free Online | Filekrush"
+  description="Create Canadian passport photos (50x70mm, 591x827px) instantly. White background, correct dimensions. Free, no upload."
+  canonical="/passport-photo/canada"
+  heading="Canadian Passport Photo"
+  subheading="50 × 70mm (591 × 827px) — white background, ready to submit."
+>
+  <PassportPhoto client:only="react" defaultCountry="canada" />
+
+  <Fragment slot="content">
+    <section class="prose prose-gray max-w-none">
+      <h2>Canadian passport photo requirements</h2>
+      <p>Canadian passport photos must measure 50 × 70mm with a white or light-coloured background. The face height from chin to crown should be between 31-36mm. Photos must be taken within the last 12 months.</p>
+
+      <h2>Where is this size used?</h2>
+      <p>Canadian passport applications, Canadian visa applications, PR (permanent residency) applications, citizenship applications, and NEXUS card applications.</p>
+    </section>
+  </Fragment>
+</ToolLayout>

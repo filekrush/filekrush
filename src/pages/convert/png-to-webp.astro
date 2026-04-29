@@ -1,0 +1,24 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import ConvertFormat from '../../components/tools/ConvertFormat';
+---
+
+<ToolLayout
+  title="Convert PNG to WebP Free Online | Filekrush"
+  description="Convert PNG images to WebP for dramatically smaller file sizes. No upload, runs in your browser."
+  canonical="/convert/png-to-webp"
+  heading="Convert PNG to WebP"
+  subheading="Convert your PNG to WebP format — free, private, instant."
+>
+  <ConvertFormat client:only="react" fromFormat="image/png" toFormat="image/webp" />
+
+  <Fragment slot="content">
+    <section class="prose prose-gray max-w-none">
+      <h2>Why convert PNG to WebP?</h2>
+      <p>WebP supports both lossy and lossless compression, and produces files 26% smaller than PNG for lossless and 25-34% smaller for lossy at equivalent quality. If you're using PNG images on a website, converting to WebP is one of the easiest performance wins available.</p>
+
+      <h2>Does WebP support transparency?</h2>
+      <p>Yes. WebP supports alpha transparency just like PNG, so your transparent backgrounds will be preserved.</p>
+    </section>
+  </Fragment>
+</ToolLayout>

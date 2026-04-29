@@ -1,0 +1,24 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import PassportPhoto from '../../components/tools/PassportPhoto';
+---
+
+<ToolLayout
+  title="Chinese Passport Photo Size — 33x48mm Free Online | Filekrush"
+  description="Create Chinese passport photos (33x48mm, 390x567px) instantly. White background, correct dimensions. Free, no upload."
+  canonical="/passport-photo/china"
+  heading="Chinese Passport Photo"
+  subheading="33 × 48mm (390 × 567px) — white background, ready to submit."
+>
+  <PassportPhoto client:only="react" defaultCountry="china" />
+
+  <Fragment slot="content">
+    <section class="prose prose-gray max-w-none">
+      <h2>Chinese passport photo requirements</h2>
+      <p>Chinese passport photos must measure 33 × 48mm with a white background. The head height from chin to top of head should be between 28-33mm. Photos must be recent and clearly show facial features.</p>
+
+      <h2>Where is this size used?</h2>
+      <p>Chinese passport applications, Chinese visa applications, residence permit applications, and various government ID submissions in China.</p>
+    </section>
+  </Fragment>
+</ToolLayout>

@@ -1,0 +1,24 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import PassportPhoto from '../../components/tools/PassportPhoto';
+---
+
+<ToolLayout
+  title="Schengen Visa Photo Size — 35x45mm Free Online | Filekrush"
+  description="Create Schengen visa photos (35x45mm, 413x531px) instantly. White background, correct dimensions. Free, no upload."
+  canonical="/passport-photo/schengen"
+  heading="Schengen Visa Photo"
+  subheading="35 × 45mm (413 × 531px) — white background, ready to submit."
+>
+  <PassportPhoto client:only="react" defaultCountry="schengen" />
+
+  <Fragment slot="content">
+    <section class="prose prose-gray max-w-none">
+      <h2>Schengen visa photo requirements</h2>
+      <p>All Schengen area visa applications require photos measuring 35 × 45mm with a white or light grey background. Your face should cover 70-80% of the frame. The photo must be recent, taken within the last 6 months.</p>
+
+      <h2>Which countries use this format?</h2>
+      <p>All 27 Schengen member states: France, Germany, Italy, Spain, Netherlands, Belgium, Austria, Switzerland, Greece, Portugal, Sweden, Norway, Denmark, Finland, Poland, Czech Republic, Hungary, and others. The photo requirements are standardized across all member states.</p>
+    </section>
+  </Fragment>
+</ToolLayout>

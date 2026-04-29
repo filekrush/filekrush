@@ -1,0 +1,24 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import PassportPhoto from '../../components/tools/PassportPhoto';
+---
+
+<ToolLayout
+  title="UK Passport Photo Size — 35x45mm Free Online | Filekrush"
+  description="Create UK passport photos (35x45mm, 413x531px) instantly. White background, correct dimensions. Free, no upload."
+  canonical="/passport-photo/uk"
+  heading="UK Passport Photo"
+  subheading="35 × 45mm (413 × 531px) — white background, ready to submit."
+>
+  <PassportPhoto client:only="react" defaultCountry="uk" />
+
+  <Fragment slot="content">
+    <section class="prose prose-gray max-w-none">
+      <h2>UK passport photo requirements</h2>
+      <p>The UK Home Office requires passport photos measuring 35 × 45mm. The background must be plain light grey or white. Your head height from chin to crown should be between 29-34mm. The photo must be taken within the last month.</p>
+
+      <h2>Where is this size used?</h2>
+      <p>UK passport applications, UK driving licence applications, UK visa applications, and Biometric Residence Permit (BRP) applications.</p>
+    </section>
+  </Fragment>
+</ToolLayout>

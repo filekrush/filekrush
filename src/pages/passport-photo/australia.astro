@@ -1,0 +1,24 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import PassportPhoto from '../../components/tools/PassportPhoto';
+---
+
+<ToolLayout
+  title="Australian Passport Photo Size — 35x45mm Free Online | Filekrush"
+  description="Create Australian passport photos (35x45mm, 413x531px) instantly. White background, correct dimensions. Free, no upload."
+  canonical="/passport-photo/australia"
+  heading="Australian Passport Photo"
+  subheading="35 × 45mm (413 × 531px) — white background, ready to submit."
+>
+  <PassportPhoto client:only="react" defaultCountry="australia" />
+
+  <Fragment slot="content">
+    <section class="prose prose-gray max-w-none">
+      <h2>Australian passport photo requirements</h2>
+      <p>Australian passport photos must measure 35 × 45mm on a plain white background. The head height from chin to crown should be between 32-36mm. Photos must be less than 6 months old.</p>
+
+      <h2>Where is this size used?</h2>
+      <p>Australian passport applications, Australian visa applications, citizenship ceremony photos, and various government ID submissions.</p>
+    </section>
+  </Fragment>
+</ToolLayout>

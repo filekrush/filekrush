@@ -1,0 +1,21 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import ResizeImage from '../../components/tools/ResizeImage';
+---
+
+<ToolLayout
+  title="Resize Image to 1920x1080 (Full HD) Free Online | Filekrush"
+  description="Resize any image to 1920x1080 pixels (Full HD). Perfect for wallpapers and presentations. No upload, runs in your browser."
+  canonical="/resize/to-1920x1080"
+  heading="Resize Image to 1920×1080"
+  subheading="Resize to Full HD (1920×1080) — free, private, instant."
+>
+  <ResizeImage client:only="react" defaultWidth={1920} defaultHeight={1080} />
+
+  <Fragment slot="content">
+    <section class="prose prose-gray max-w-none">
+      <h2>Why 1920×1080?</h2>
+      <p>1920×1080 (Full HD / 1080p) is the standard resolution for desktop wallpapers, YouTube thumbnails, presentation slides, and video backgrounds. It's the most common screen resolution worldwide.</p>
+    </section>
+  </Fragment>
+</ToolLayout>

@@ -1,0 +1,24 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import ConvertFormat from '../../components/tools/ConvertFormat';
+---
+
+<ToolLayout
+  title="Convert WebP to PNG Free Online | Filekrush"
+  description="Convert WebP images to PNG with lossless quality. No upload, runs in your browser."
+  canonical="/convert/webp-to-png"
+  heading="Convert WebP to PNG"
+  subheading="Convert your WebP to PNG format — free, private, instant."
+>
+  <ConvertFormat client:only="react" fromFormat="image/webp" toFormat="image/png" />
+
+  <Fragment slot="content">
+    <section class="prose prose-gray max-w-none">
+      <h2>Why convert WebP to PNG?</h2>
+      <p>PNG preserves transparency and uses lossless compression. If you downloaded a WebP image and need to edit it, use it as a logo overlay, or upload it to a platform that doesn't accept WebP, converting to PNG is the way to go.</p>
+
+      <h2>Will the file get larger?</h2>
+      <p>Yes. PNG files are typically larger than WebP because PNG uses lossless compression. For a photo, expect a 2-4x size increase.</p>
+    </section>
+  </Fragment>
+</ToolLayout>

@@ -1,0 +1,24 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import PassportPhoto from '../../components/tools/PassportPhoto';
+---
+
+<ToolLayout
+  title="Japan Passport Photo Size — 35x45mm Free Online | Filekrush"
+  description="Create Japanese passport photos (35x45mm, 413x531px) instantly. White background, correct dimensions. Free, no upload."
+  canonical="/passport-photo/japan"
+  heading="Japan Passport Photo"
+  subheading="35 × 45mm (413 × 531px) — white background, ready to submit."
+>
+  <PassportPhoto client:only="react" defaultCountry="japan" />
+
+  <Fragment slot="content">
+    <section class="prose prose-gray max-w-none">
+      <h2>Japanese passport photo requirements</h2>
+      <p>Japanese passport photos must measure 35 × 45mm with a plain white background. No head coverings are allowed unless for religious reasons. The photo must be taken within the last 6 months.</p>
+
+      <h2>Where is this size used?</h2>
+      <p>Japanese passport applications, Japanese visa applications, residence card applications, and My Number card submissions.</p>
+    </section>
+  </Fragment>
+</ToolLayout>

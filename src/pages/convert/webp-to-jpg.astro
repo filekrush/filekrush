@@ -1,0 +1,24 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import ConvertFormat from '../../components/tools/ConvertFormat';
+---
+
+<ToolLayout
+  title="Convert WebP to JPG Free Online | Filekrush"
+  description="Convert WebP images to JPG for universal compatibility. No upload, runs in your browser."
+  canonical="/convert/webp-to-jpg"
+  heading="Convert WebP to JPG"
+  subheading="Convert your WebP to JPG format — free, private, instant."
+>
+  <ConvertFormat client:only="react" fromFormat="image/webp" toFormat="image/jpeg" />
+
+  <Fragment slot="content">
+    <section class="prose prose-gray max-w-none">
+      <h2>Why convert WebP to JPG?</h2>
+      <p>WebP images downloaded from websites often can't be opened in older software, sent as email attachments, or uploaded to forms that only accept JPG. Converting to JPG ensures your image works everywhere.</p>
+
+      <h2>Will I lose quality?</h2>
+      <p>There may be minimal quality loss since both WebP and JPG use lossy compression. At the default 92% quality setting, the difference is imperceptible for most uses.</p>
+    </section>
+  </Fragment>
+</ToolLayout>

@@ -1,0 +1,21 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import ResizeImage from '../../components/tools/ResizeImage';
+---
+
+<ToolLayout
+  title="Resize Image to 300x300 Pixels Free Online | Filekrush"
+  description="Resize any image to 300x300 pixels. Ideal for thumbnails and avatars. No upload, runs in your browser."
+  canonical="/resize/to-300x300"
+  heading="Resize Image to 300×300"
+  subheading="Resize to 300×300 pixels — free, private, instant."
+>
+  <ResizeImage client:only="react" defaultWidth={300} defaultHeight={300} />
+
+  <Fragment slot="content">
+    <section class="prose prose-gray max-w-none">
+      <h2>Why 300×300?</h2>
+      <p>300×300 is commonly used for profile avatars, directory listings, thumbnails, and small product images. Many job portals, membership sites, and online directories specify this size for user photos.</p>
+    </section>
+  </Fragment>
+</ToolLayout>

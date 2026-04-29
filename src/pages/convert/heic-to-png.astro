@@ -1,0 +1,24 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import ConvertFormat from '../../components/tools/ConvertFormat';
+---
+
+<ToolLayout
+  title="Convert HEIC to PNG Free Online | Filekrush"
+  description="Convert iPhone HEIC photos to PNG with lossless quality. No upload, runs in your browser."
+  canonical="/convert/heic-to-png"
+  heading="Convert HEIC to PNG"
+  subheading="Convert iPhone photos to PNG — free, private, instant."
+>
+  <ConvertFormat client:only="react" fromFormat="image/heic" toFormat="image/png" />
+
+  <Fragment slot="content">
+    <section class="prose prose-gray max-w-none">
+      <h2>Why convert HEIC to PNG?</h2>
+      <p>If you need lossless quality from your iPhone photos — for editing, printing, or graphic design work — PNG is better than JPG. Converting HEIC to PNG preserves maximum detail without the compression artifacts that JPG introduces.</p>
+
+      <h2>When to use JPG instead?</h2>
+      <p>If file size matters more than perfect quality (email, web uploads, forms), convert to JPG instead. PNG files from iPhone photos will be significantly larger than JPG equivalents.</p>
+    </section>
+  </Fragment>
+</ToolLayout>

@@ -1,0 +1,24 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import ConvertFormat from '../../components/tools/ConvertFormat';
+---
+
+<ToolLayout
+  title="Convert JPG to PNG Free Online | Filekrush"
+  description="Convert JPG images to PNG format instantly. Preserve transparency and quality. No upload, runs in your browser."
+  canonical="/convert/jpg-to-png"
+  heading="Convert JPG to PNG"
+  subheading="Convert your JPG to PNG format — free, private, instant."
+>
+  <ConvertFormat client:only="react" fromFormat="image/jpeg" toFormat="image/png" />
+
+  <Fragment slot="content">
+    <section class="prose prose-gray max-w-none">
+      <h2>Why convert JPG to PNG?</h2>
+      <p>PNG supports transparency and lossless compression, making it ideal for graphics, logos, and images that need crisp edges. If you need to overlay an image on different backgrounds or preserve exact pixel quality for editing, PNG is the better format.</p>
+
+      <h2>Will the file size increase?</h2>
+      <p>Usually yes. PNG files are larger than JPGs for photographic content because PNG uses lossless compression. For photos, expect a 3-5x size increase. For graphics with flat colors, the difference is smaller.</p>
+    </section>
+  </Fragment>
+</ToolLayout>

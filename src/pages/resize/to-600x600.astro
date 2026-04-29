@@ -1,0 +1,21 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import ResizeImage from '../../components/tools/ResizeImage';
+---
+
+<ToolLayout
+  title="Resize Image to 600x600 Pixels Free Online | Filekrush"
+  description="Resize any image to exactly 600x600 pixels. Perfect for profile photos and social media. No upload, runs in your browser."
+  canonical="/resize/to-600x600"
+  heading="Resize Image to 600×600"
+  subheading="Resize to 600×600 pixels — free, private, instant."
+>
+  <ResizeImage client:only="react" defaultWidth={600} defaultHeight={600} />
+
+  <Fragment slot="content">
+    <section class="prose prose-gray max-w-none">
+      <h2>Why 600×600?</h2>
+      <p>600×600 is a common requirement for profile photos, product listings, and social media thumbnails. Many e-commerce platforms like Amazon and Flipkart recommend square product images at this size. Indian passport and visa photos are also 600×600 pixels.</p>
+    </section>
+  </Fragment>
+</ToolLayout>
