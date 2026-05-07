@@ -11,7 +11,7 @@ interface Props {
 
 const { title, description, canonical } = Astro.props;
 const siteUrl = 'https://filekrush.com';
-const canonicalUrl = canonical ? `${siteUrl}${canonical}` : siteUrl;
+const canonicalUrl = canonical ? `${siteUrl}${canonical.endsWith('/') ? canonical : canonical + '/'}` : siteUrl + '/';
 ---
 
 <!doctype html>
