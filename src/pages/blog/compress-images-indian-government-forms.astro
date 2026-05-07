@@ -1,0 +1,230 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="How to Compress Images for Indian Government Forms (SSC, IBPS, UPSC, PAN, Aadhaar) | Filekrush"
+  description="Exact image size requirements for SSC, IBPS, UPSC, PAN, and Aadhaar portals. Step-by-step guide to compress photos and signatures to the right KB range."
+  canonical="/blog/compress-images-indian-government-forms"
+>
+  <article class="max-w-[990px] mx-auto px-6 py-12 sm:py-16">
+    <h1 class="text-4xl sm:text-5xl font-semibold leading-tight mb-4" style="color: var(--text-primary);">How to Compress Images for Indian Government Forms (SSC, IBPS, UPSC, PAN, Aadhaar)</h1>
+
+    <div class="prose prose-gray max-w-none">
+
+      <p>Every Indian government portal — SSC, IBPS, UPSC, NSDL, UIDAI — rejects your photo or signature the moment it exceeds the file size limit. The fix takes under 30 seconds: <a href="/compress/for-government">compress the image to the exact KB range the portal requires</a>, without destroying clarity. This guide gives you the exact specs for every major portal and shows you how to meet them using Filekrush.</p>
+
+      <h2>Why Government Portals Reject Your Uploads</h2>
+
+      <p>A modern smartphone camera produces photos between 3 MB and 8 MB. Government portals cap photo uploads at 50 KB — sometimes as low as 20 KB. That's a 100x to 400x reduction from what your phone generates.</p>
+
+      <p>The portals don't tell you this clearly. You get a vague error like "file size exceeds the limit" or, worse, the upload button simply does nothing. No explanation, no suggested fix.</p>
+
+      <p>This isn't a design flaw — it's an infrastructure constraint. When crores of candidates apply for SSC CGL or IBPS PO simultaneously, the servers need lightweight files. But the burden of meeting those specs falls entirely on the applicant.</p>
+
+      <p>I'm the IT person in my family. Whenever relatives — including government employees — need help with form uploads or submissions, it's a bad day for me. When I married a lawyer, my responsibility multiplied, because she had to do forms and uploads on a daily basis for her work. That's why I built Filekrush.</p>
+
+      <h2>Exact Image Size Requirements by Portal</h2>
+
+      <p>Every portal has different specs. Getting even one parameter wrong — file size, dimensions, or format — triggers a rejection. Here's the complete reference table for 2026:</p>
+
+      <img src="/blog-requirements.webp" alt="Indian government portal image upload requirements matrix for SSC IBPS UPSC PAN Aadhaar showing photo and signature specifications" class="w-full my-6" />
+
+      <h3>Photo Requirements</h3>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Portal</th>
+            <th>Dimensions (px)</th>
+            <th>File Size</th>
+            <th>Format</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>SSC (CGL, CHSL, MTS, GD)</td>
+            <td>200 × 230</td>
+            <td><a href="/compress/to-50kb">20–50 KB</a></td>
+            <td>JPEG only</td>
+          </tr>
+          <tr>
+            <td>IBPS (PO, Clerk, SO, RRB)</td>
+            <td>200 × 230</td>
+            <td><a href="/compress/to-50kb">20–50 KB</a></td>
+            <td>JPEG only</td>
+          </tr>
+          <tr>
+            <td>UPSC (CSE, NDA, CDS, CAPF)</td>
+            <td>350–1000 × 350–1000 (square)</td>
+            <td><a href="/compress/to-200kb">20–300 KB</a></td>
+            <td>JPEG only</td>
+          </tr>
+          <tr>
+            <td>PAN Card (NSDL)</td>
+            <td>276 × 197 (at 200 DPI)</td>
+            <td><a href="/compress/to-50kb">20–50 KB</a></td>
+            <td>JPEG only</td>
+          </tr>
+          <tr>
+            <td>Aadhaar (UIDAI online update)</td>
+            <td>413 × 531 (at 300 DPI)</td>
+            <td><a href="/compress/to-50kb">Under 50 KB</a></td>
+            <td>JPEG only</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Signature Requirements</h3>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Portal</th>
+            <th>Dimensions (px)</th>
+            <th>File Size</th>
+            <th>Format</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>SSC (all exams)</td>
+            <td>140 × 60</td>
+            <td><a href="/compress/to-20kb">10–20 KB</a></td>
+            <td>JPEG only</td>
+          </tr>
+          <tr>
+            <td>IBPS (all exams)</td>
+            <td>140 × 60</td>
+            <td><a href="/compress/to-20kb">10–20 KB</a></td>
+            <td>JPEG only</td>
+          </tr>
+          <tr>
+            <td>UPSC (all exams)</td>
+            <td>350–500 × 350–500 (3 signatures, stacked)</td>
+            <td><a href="/compress/to-100kb">20–100 KB</a></td>
+            <td>JPEG only</td>
+          </tr>
+          <tr>
+            <td>PAN Card (NSDL)</td>
+            <td>~354 × 157 (4.5 cm × 2 cm at 200 DPI)</td>
+            <td><a href="/compress/to-50kb">20–50 KB</a></td>
+            <td>JPEG only</td>
+          </tr>
+          <tr>
+            <td>Aadhaar</td>
+            <td colspan="3">Typically captured at enrollment centre</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><strong>Critical detail most guides miss:</strong> SSC and IBPS share nearly identical specs. UPSC is the outlier — it requires a square photo and three stacked signatures in a single image. PAN Card dimensions are the reverse of Aadhaar (portrait vs. landscape orientation), which trips up applicants who reuse the same photo without adjusting.</p>
+
+      <h3>Additional Uploads (IBPS RRB Specific)</h3>
+
+      <p>IBPS RRB exams require two extra documents beyond the standard photo and signature:</p>
+
+      <ul>
+        <li><strong>Left thumb impression:</strong> 240 × 240 pixels, 50–100 KB, JPEG</li>
+        <li><strong>Handwritten declaration:</strong> 800 × 400 pixels, 50–100 KB, JPEG</li>
+      </ul>
+
+      <p>These are unique to banking exams and aren't required by SSC or UPSC.</p>
+
+      <h2>Resizing ≠ Compressing: The Mistake That Gets Your Form Rejected</h2>
+
+      <img src="/blog-comparison.webp" alt="Comparison of passport photo compression levels showing correct 45KB result vs over-compressed, uncompressed, and resized-but-not-compressed versions" class="w-full my-6" />
+
+      <p>This is the single most common error applicants make, and most "how-to" guides on the internet make it worse by using the terms interchangeably.</p>
+
+      <p><strong><a href="/resize">Resizing</a></strong> changes the pixel dimensions of your image — making it smaller in width and height. <strong><a href="/compress">Compressing</a></strong> reduces the file size in kilobytes by adjusting how much data the image stores.</p>
+
+      <p>Here's why the distinction matters: you can <a href="/resize">resize</a> a 4000 × 3000 pixel photo down to 200 × 230 pixels and still end up with a file that's 150 KB — well over the SSC limit of 50 KB. The dimensions are correct, but the file size is wrong because the image wasn't compressed.</p>
+
+      <p>The reverse problem also exists. You can <a href="/compress/to-50kb">compress a photo down to 30 KB</a> without resizing it, which means the portal rejects it because the pixel dimensions don't match, even though the file size is technically fine.</p>
+
+      <p>You need to do both — in the right order:</p>
+
+      <ol>
+        <li><strong><a href="/resize">Resize first</a></strong> to the portal's required pixel dimensions</li>
+        <li><strong><a href="/compress/for-government">Compress second</a></strong> to hit the KB range</li>
+        <li><strong><a href="/convert/png-to-jpg">Convert to JPEG</a></strong> if your source file is PNG, HEIC, or WebP</li>
+      </ol>
+
+      <p>Most free tools online only do one of these. They either resize without compressing, or compress without giving you control over the target KB range. This is why applicants end up in a loop of upload → reject → re-edit → upload → reject.</p>
+
+      <p>Filekrush handles all three steps. You upload your image, <a href="/compress/for-government">set the target file size</a>, and the tool compresses it to that exact KB limit while preserving enough clarity for document verification.</p>
+
+      <h2>How to Compress Your Photo and Signature Step by Step</h2>
+
+      <img src="/blog-workflow.webp" alt="Three-step image compression workflow for government form uploads showing resize then compress then convert to JPEG" class="w-full my-6" />
+
+      <h3>For Photos (SSC, IBPS, PAN)</h3>
+
+      <p><strong>Step 1: Start with a good source photo.</strong> Use a passport-style photo taken against a plain white background. Natural daylight produces the clearest results. Avoid phone selfies — the distortion from a close-range front camera creates dimension issues during cropping.</p>
+
+      <p><strong>Step 2: Crop to the right aspect ratio.</strong> For SSC and IBPS, the target is a roughly 7:8 portrait ratio (200 × 230 pixels). For PAN, it's a slightly wider portrait. Don't eyeball this — even a few pixels off can cause the portal to flag the upload.</p>
+
+      <p><strong>Step 3: <a href="/compress/to-50kb">Compress to the target KB range</a>.</strong> Go to <a href="/compress/for-government">Filekrush</a>. Upload your cropped photo. Set your target file size — <a href="/compress/to-50kb">50 KB</a> for SSC/IBPS, or whatever your specific portal requires. Download the compressed JPEG.</p>
+
+      <p><strong>Step 4: Verify before uploading.</strong> Right-click the downloaded file → Properties (Windows) or Get Info (Mac). Confirm the file size is within the portal's range. Open the image and check that your face is still clearly visible — no pixelation around the eyes or jawline.</p>
+
+      <h3>For Signatures (SSC, IBPS)</h3>
+
+      <p>Signatures are trickier than photos because they consist of thin, high-contrast lines on a white background. Standard compression algorithms blur those lines, making the signature illegible.</p>
+
+      <p><strong>Step 1:</strong> Sign with a black ink pen on clean, white, unruled paper. This is non-negotiable — SSC and IBPS both specify black ink. Blue ink produces lower contrast when scanned.</p>
+
+      <p><strong>Step 2:</strong> Photograph or scan the signature in good lighting. Crop tightly — the less white space around the signature, the smaller the file and the sharper the result.</p>
+
+      <p><strong>Step 3:</strong> <a href="/compress/to-20kb">Compress to 10–20 KB</a> using Filekrush. Since signatures are mostly white space with thin dark lines, they compress very efficiently. A quality setting of 70–80% typically hits the target without blurring the strokes.</p>
+
+      <h3>For UPSC (Special Case)</h3>
+
+      <p>UPSC requires you to sign three times vertically on a single sheet of white paper, then scan all three signatures as one image. The combined image must be 350–500 pixels wide and between <a href="/compress/to-100kb">20–100 KB</a>.</p>
+
+      <p>This catches many candidates off guard because a single signature file won't be accepted. Sign three times with consistent spacing, scan or photograph the set, crop to include all three, and then <a href="/compress/to-100kb">compress</a>.</p>
+
+      <h2>What to Do When Compression Makes Your Image Look Terrible</h2>
+
+      <p>Over-compression is a real problem. If you push a photo below its quality floor, you get visible blockiness — especially around facial features. Here's how to avoid it:</p>
+
+      <p><strong>The 65% quality rule.</strong> For passport-style photos at 200 × 230 pixels, JPEG quality between 65% and 80% almost always lands within the 20–50 KB range. Drop below 60% and you risk visible degradation that could trigger a rejection during document verification — not at upload, but later when a human examiner reviews your file.</p>
+
+      <p><strong>Signatures have more headroom.</strong> Because they're mostly white with thin black lines, signatures can handle more aggressive compression. A 140 × 60 pixel signature at 70% quality typically produces a 12–15 KB file that's perfectly legible.</p>
+
+      <p><strong>If the file is still too large after compression:</strong></p>
+
+      <ul>
+        <li>Check if you're accidentally saving as PNG instead of JPEG. PNG files are lossless and much larger. <a href="/convert/png-to-jpg">Convert PNG to JPG here</a>.</li>
+        <li>Ensure you've actually <a href="/resize">resized the dimensions</a> first. Compressing a 4000 × 3000 image down to 50 KB produces terrible results. Resize to the target pixels, then compress.</li>
+        <li><a href="/metadata/remover">Strip EXIF metadata</a>. Camera apps embed GPS coordinates, device info, and colour profiles into image files. This metadata can add 10–50 KB. Most compression tools, including Filekrush, strip this automatically.</li>
+      </ul>
+
+      <h2>Common Rejection Reasons Beyond File Size</h2>
+
+      <p>Even with perfect file size and dimensions, your upload can still be rejected. These are the content-level issues portals flag:</p>
+
+      <p><strong>Wrong background colour.</strong> Every portal requires white or very light backgrounds. Cream, light blue, or "studio grey" backgrounds get flagged. UPSC is especially strict — their system flags anything that isn't pure white.</p>
+
+      <p><strong>Spectacles in the photo.</strong> SSC and UPSC explicitly prohibit glasses in uploaded photos. Even if your Aadhaar card shows you wearing glasses, remove them for exam form photos.</p>
+
+      <p><strong>Signature in capital letters.</strong> SSC, IBPS, and UPSC all reject block-letter signatures. Your signature must be in running handwriting. This is stated clearly in every notification, yet remains one of the top reasons for form rejection.</p>
+
+      <p><strong>Mismatched file format.</strong> Renaming a PNG file to .jpg doesn't convert it. The portal reads the actual file header, not the extension. If your image is PNG, HEIC, or WebP, you need to genuinely <a href="/convert">convert it to JPEG</a> before uploading.</p>
+
+      <p><strong>Photo older than 6 months.</strong> Most portals require a recent photograph. UPSC specifies the photo must not be older than 10 days from the application date — by far the strictest rule among all government bodies.</p>
+
+      <h2>Key Takeaways</h2>
+
+      <ol>
+        <li><strong>Every portal has different specs.</strong> SSC/IBPS photos need 200 × 230 px at <a href="/compress/to-50kb">20–50 KB</a>. UPSC needs square photos at 350+ px and 20–300 KB. PAN Card dimensions are the reverse of Aadhaar. Always check the notification for your specific exam.</li>
+        <li><strong>Resizing and compressing are different operations.</strong> You need both, done in sequence — <a href="/resize">resize to the correct pixel dimensions</a> first, then <a href="/compress/for-government">compress to the target KB range</a>. Doing only one of the two is the number-one cause of upload failures.</li>
+        <li><strong>Signatures need special handling.</strong> Thin lines on white backgrounds compress differently than photos. Use black ink, crop tightly, and <a href="/compress/to-20kb">compress at 70–80% quality</a> to stay within the 10–20 KB range without blurring.</li>
+        <li><strong>Use a tool that targets exact KB limits.</strong> Trial-and-error compression wastes time. <a href="/compress/for-government">Filekrush</a> lets you set the exact file size you need and handles the math — no guesswork, no repeated upload failures.</li>
+        <li><strong>Check content requirements, not just file specs.</strong> White background, no glasses, running-hand signature, recent photo. Meeting the technical specs is only half the battle.</li>
+      </ol>
+
+    </div>
+  </article>
+</BaseLayout>
