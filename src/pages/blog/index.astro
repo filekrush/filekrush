@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const posts = [
+  {
+    title: 'How to Compress Images for Indian Government Forms (SSC, IBPS, UPSC, PAN, Aadhaar)',
+    description: 'Exact image size requirements for every major Indian government portal. Step-by-step guide to compress photos and signatures to the right KB range.',
+    href: '/blog/compress-images-indian-government-forms',
+    date: 'May 2026',
+  },
+];
+---
+
+<BaseLayout
+  title="Blog | Filekrush"
+  description="Guides, tutorials, and tips for compressing, resizing, and converting files. Practical advice for real-world file problems."
+  canonical="/blog"
+>
+  <section class="max-w-[990px] mx-auto px-6 py-12 sm:py-16">
+    <h1 class="text-4xl sm:text-5xl font-semibold mb-10" style="color: var(--text-primary);">Blog</h1>
+
+    <div class="space-y-6">
+      {posts.map(post => (
+        <a href={post.href} class="group block bg-white px-6 py-6 transition-all duration-200 hover:bg-[var(--bg-card-hover)]">
+          <p class="text-[14px] mb-1 group-hover:text-[var(--text-secondary)] transition-colors" style="color: var(--text-secondary);">{post.date}</p>
+          <h2 class="text-[22px] font-semibold group-hover:text-[var(--text-inverse)] transition-colors" style="color: var(--text-primary);">{post.title}</h2>
+          <p class="text-[16px] mt-2 group-hover:text-[var(--text-secondary)] transition-colors" style="color: var(--text-secondary);">{post.description}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
