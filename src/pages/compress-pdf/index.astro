@@ -1,6 +1,8 @@
 ---
 import ToolLayout from '../../layouts/ToolLayout.astro';
 import CompressPdf from '../../components/tools/CompressPdf.tsx';
+import RelatedTools from '../../components/layout/RelatedTools';
+import { relatedTools } from '../../data/related-tools';
 ---
 
 <ToolLayout
@@ -27,5 +29,7 @@ import CompressPdf from '../../components/tools/CompressPdf.tsx';
       <h2>Is it safe?</h2>
       <p>Yes. Your PDF is processed entirely in your browser. The file never leaves your device. No server, no storage, no tracking.</p>
     </section>
+
+    <RelatedTools title="PDF compression options" tools={relatedTools.compressPdf} />
   </Fragment>
 </ToolLayout>

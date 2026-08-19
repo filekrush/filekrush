@@ -1,6 +1,8 @@
 ---
 import ToolLayout from '../../layouts/ToolLayout.astro';
 import ResizeImage from '../../components/tools/ResizeImage';
+import RelatedTools from '../../components/layout/RelatedTools';
+import { relatedTools } from '../../data/related-tools';
 ---
 
 <ToolLayout
@@ -27,5 +29,7 @@ import ResizeImage from '../../components/tools/ResizeImage';
       <h2>Is it safe?</h2>
       <p>Yes. Everything runs in your browser. No files are uploaded to any server.</p>
     </section>
+
+    <RelatedTools title="Other resize dimensions" tools={relatedTools.resize} />
   </Fragment>
 </ToolLayout>

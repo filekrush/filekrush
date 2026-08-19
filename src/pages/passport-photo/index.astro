@@ -1,6 +1,8 @@
 ---
 import ToolLayout from '../../layouts/ToolLayout.astro';
 import PassportPhoto from '../../components/tools/PassportPhoto';
+import RelatedTools from '../../components/layout/RelatedTools';
+import { relatedTools } from '../../data/related-tools';
 ---
 
 <ToolLayout
@@ -25,5 +27,7 @@ import PassportPhoto from '../../components/tools/PassportPhoto';
       <h2>Supported countries</h2>
       <p>India (51×51mm), United States (51×51mm), United Kingdom (35×45mm), Schengen Visa (35×45mm), Canada (50×70mm), Australia (35×45mm), Japan (35×45mm), China (33×48mm). More countries coming soon.</p>
     </section>
+
+    <RelatedTools title="Passport photo by country" tools={relatedTools.passportPhoto} />
   </Fragment>
 </ToolLayout>

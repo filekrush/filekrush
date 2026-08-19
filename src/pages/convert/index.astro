@@ -1,6 +1,8 @@
 ---
 import ToolLayout from '../../layouts/ToolLayout.astro';
 import ConvertFormat from '../../components/tools/ConvertFormat';
+import RelatedTools from '../../components/layout/RelatedTools';
+import { relatedTools } from '../../data/related-tools';
 ---
 
 <ToolLayout
@@ -27,5 +29,7 @@ import ConvertFormat from '../../components/tools/ConvertFormat';
       <p><strong>WebP</strong> — best for web. Smaller than both JPG and PNG at similar quality. Supported by all modern browsers.</p>
       <p><strong>HEIC</strong> — default iPhone photo format. Great quality but not widely supported outside Apple devices. Convert to JPG or PNG for universal compatibility.</p>
     </section>
+
+    <RelatedTools title="Format conversion options" tools={relatedTools.convert} />
   </Fragment>
 </ToolLayout>
