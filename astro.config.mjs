@@ -6,6 +6,8 @@ import react from '@astrojs/react';
 
 import sitemap from '@astrojs/sitemap';
 
+import cloudflare from '@astrojs/cloudflare';
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://filekrush.com',
@@ -14,5 +16,6 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
 
-  integrations: [react(), sitemap()]
+  integrations: [react(), sitemap()],
+  adapter: cloudflare()
 });
