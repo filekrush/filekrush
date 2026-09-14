@@ -10,24 +10,126 @@ import { relatedTools } from '../../data/related-tools';
   description="Convert images between JPG, PNG, and WebP. Runs in your browser — no upload, no signup."
   canonical="/convert"
   heading="Convert Image Format"
-  subheading="Switch between JPG, PNG, and WebP — free, private, instant."
+  subheading="Switch between JPG, PNG, WebP, and HEIC — pick the right format for your use case. Free, private, instant."
 >
   <ConvertFormat client:only="react" />
 
   <Fragment slot="content">
     <section class="prose prose-gray max-w-none">
-      <h2>How it works</h2>
+      <div class="toc">
+        <p>On this page</p>
+        <ul>
+          <li><a href="#which-format">Which format do I need?</a></li>
+          <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="#comparison">Format comparison</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+
+      <h2 id="which-format">Which format do I need?</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Situation</th>
+            <th>Convert to</th>
+            <th>Why</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>iPhone photo won't upload to a website or form</td>
+            <td><a href="/convert/heic-to-jpg/">HEIC to JPG</a></td>
+            <td>HEIC isn't supported outside Apple devices — most portals require JPG.</td>
+          </tr>
+          <tr>
+            <td>Need transparency preserved from an iPhone screenshot</td>
+            <td><a href="/convert/heic-to-png/">HEIC to PNG</a></td>
+            <td>PNG keeps transparency; JPG doesn't.</td>
+          </tr>
+          <tr>
+            <td>Logo or graphic with a transparent background</td>
+            <td><a href="/convert/jpg-to-png/">JPG to PNG</a></td>
+            <td>Lossless, and supports transparency for overlays and graphics.</td>
+          </tr>
+          <tr>
+            <td>Speeding up a website</td>
+            <td><a href="/convert/jpg-to-webp/">JPG to WebP</a> or <a href="/convert/png-to-webp/">PNG to WebP</a></td>
+            <td>WebP is 25-30% smaller than JPG/PNG at similar quality — see the <a href="/compress/for-website/">web performance guide</a>.</td>
+          </tr>
+          <tr>
+            <td>PNG file too large for email or a form</td>
+            <td><a href="/convert/png-to-jpg/">PNG to JPG</a></td>
+            <td>JPG compresses far more efficiently — trades transparency for a much smaller file.</td>
+          </tr>
+          <tr>
+            <td>WebP image needs to open in an older tool</td>
+            <td><a href="/convert/webp-to-jpg/">WebP to JPG</a> or <a href="/convert/webp-to-png/">WebP to PNG</a></td>
+            <td>Universal formats that any editor, printer, or portal accepts.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 id="how-it-works">How it works</h2>
       <ol>
         <li><strong>Drop your image</strong> — supports JPG, PNG, WebP, and HEIC.</li>
         <li><strong>Pick a format</strong> — choose your output format and quality level.</li>
         <li><strong>Download</strong> — your converted image is ready instantly.</li>
       </ol>
 
-      <h2>When to use which format?</h2>
-      <p><strong>JPG</strong> — best for photographs. Small file size, no transparency. Use for photos, social media, email.</p>
-      <p><strong>PNG</strong> — best for graphics with transparency. Larger files but lossless quality. Use for logos, screenshots, graphics.</p>
-      <p><strong>WebP</strong> — best for web. Smaller than both JPG and PNG at similar quality. Supported by all modern browsers.</p>
-      <p><strong>HEIC</strong> — default iPhone photo format. Great quality but not widely supported outside Apple devices. Convert to JPG or PNG for universal compatibility.</p>
+      <h2 id="comparison">Format comparison</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Format</th>
+            <th>Best for</th>
+            <th>Transparency</th>
+            <th>Typical file size</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>JPG</td>
+            <td>Photographs, social media, email</td>
+            <td>No</td>
+            <td>Smallest</td>
+          </tr>
+          <tr>
+            <td>PNG</td>
+            <td>Logos, screenshots, graphics</td>
+            <td>Yes</td>
+            <td>Largest (lossless)</td>
+          </tr>
+          <tr>
+            <td>WebP</td>
+            <td>Modern websites</td>
+            <td>Yes</td>
+            <td>Smaller than both JPG and PNG</td>
+          </tr>
+          <tr>
+            <td>HEIC</td>
+            <td>Default iPhone photo storage</td>
+            <td>No</td>
+            <td>Small, but poor compatibility outside Apple</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 id="faq">FAQ</h2>
+
+      <h3>Will converting formats lose quality?</h3>
+      <p>Converting to a lossy format like JPG can introduce minor quality loss, especially if you convert back and forth repeatedly. Converting to a lossless format like PNG doesn't lose quality, but doesn't shrink the file much either. For a one-time conversion at a reasonable quality setting, the difference is invisible in most cases.</p>
+
+      <h3>Why won't my HEIC photo open in some apps?</h3>
+      <p>HEIC is Apple's default photo format since iOS 11, and it's not natively supported by most non-Apple software, older browsers, or many web forms. <a href="/convert/heic-to-jpg/">Converting to JPG</a> fixes compatibility everywhere.</p>
+
+      <h3>Does converting to WebP hurt SEO?</h3>
+      <p>No — the opposite. Smaller image files load faster, and page speed is a Google ranking factor. See the <a href="/compress/for-website/">web performance guide</a> for more on this.</p>
+
+      <h3>Can I convert a PNG with transparency to JPG?</h3>
+      <p>Yes, but JPG doesn't support transparency — any transparent areas will be filled with a solid background color (usually white) during conversion.</p>
+
+      <h3>Is there a file size limit?</h3>
+      <p>Filekrush handles files up to 50MB. Everything is processed locally in your browser, so larger files just take a little longer depending on your device.</p>
     </section>
 
     <RelatedTools title="Format conversion options" tools={relatedTools.convert} />

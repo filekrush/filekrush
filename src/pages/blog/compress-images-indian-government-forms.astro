@@ -14,7 +14,20 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
       <p>Every Indian government portal — SSC, IBPS, UPSC, NSDL, UIDAI — rejects your photo or signature the moment it exceeds the file size limit. The fix takes under 30 seconds: <a href="/compress/for-government">compress the image to the exact KB range the portal requires</a>, without destroying clarity. This guide gives you the exact specs for every major portal and shows you how to meet them using Filekrush.</p>
 
-      <h2>Why Government Portals Reject Your Uploads</h2>
+      <div class="toc">
+        <p>On this page</p>
+        <ul>
+          <li><a href="#why-rejected">Why Portals Reject Your Uploads</a></li>
+          <li><a href="#requirements">Exact Size Requirements by Portal</a></li>
+          <li><a href="#resize-vs-compress">Resizing vs. Compressing</a></li>
+          <li><a href="#step-by-step">Step-by-Step Compression</a></li>
+          <li><a href="#fix-quality">When Compression Looks Terrible</a></li>
+          <li><a href="#other-rejections">Common Rejection Reasons</a></li>
+          <li><a href="#key-takeaways">Key Takeaways</a></li>
+        </ul>
+      </div>
+
+      <h2 id="why-rejected">Why Government Portals Reject Your Uploads</h2>
 
       <p>A modern smartphone camera produces photos between 3 MB and 8 MB. Government portals cap photo uploads at 50 KB — sometimes as low as 20 KB. That's a 100x to 400x reduction from what your phone generates.</p>
 
@@ -24,7 +37,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
       <p>I'm the IT person in my family. Whenever relatives — including government employees — need help with form uploads or submissions, it's a bad day for me. When I married a lawyer, my responsibility multiplied, because she had to do forms and uploads on a daily basis for her work. That's why I built Filekrush.</p>
 
-      <h2>Exact Image Size Requirements by Portal</h2>
+      <h2 id="requirements">Exact Image Size Requirements by Portal</h2>
 
       <p>Every portal has different specs. Getting even one parameter wrong — file size, dimensions, or format — triggers a rejection. Here's the complete reference table for 2026:</p>
 
@@ -118,7 +131,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         </tbody>
       </table>
 
-      <p><strong>Critical detail most guides miss:</strong> SSC and IBPS share nearly identical specs. UPSC is the outlier — it requires a square photo and three stacked signatures in a single image. PAN Card dimensions are the reverse of Aadhaar (portrait vs. landscape orientation), which trips up applicants who reuse the same photo without adjusting.</p>
+      <div class="callout">
+        <p><strong>Critical detail most guides miss:</strong> SSC and IBPS share nearly identical specs. UPSC is the outlier — it requires a square photo and three stacked signatures in a single image. PAN Card dimensions are the reverse of Aadhaar (portrait vs. landscape orientation), which trips up applicants who reuse the same photo without adjusting.</p>
+      </div>
 
       <h3>Additional Uploads (IBPS RRB Specific)</h3>
 
@@ -131,7 +146,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
       <p>These are unique to banking exams and aren't required by SSC or UPSC.</p>
 
-      <h2>Resizing ≠ Compressing: The Mistake That Gets Your Form Rejected</h2>
+      <h2 id="resize-vs-compress">Resizing ≠ Compressing: The Mistake That Gets Your Form Rejected</h2>
 
       <img src="/blog-comparison.webp" alt="Comparison of passport photo compression levels showing correct 45KB result vs over-compressed, uncompressed, and resized-but-not-compressed versions" class="w-full my-6" />
 
@@ -155,7 +170,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
       <p>Filekrush handles all three steps. You upload your image, <a href="/compress/for-government">set the target file size</a>, and the tool compresses it to that exact KB limit while preserving enough clarity for document verification.</p>
 
-      <h2>How to Compress Your Photo and Signature Step by Step</h2>
+      <h2 id="step-by-step">How to Compress Your Photo and Signature Step by Step</h2>
 
       <img src="/blog-workflow.webp" alt="Three-step image compression workflow for government form uploads showing resize then compress then convert to JPEG" class="w-full my-6" />
 
@@ -185,13 +200,14 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
       <p>This catches many candidates off guard because a single signature file won't be accepted. Sign three times with consistent spacing, scan or photograph the set, crop to include all three, and then <a href="/compress/to-100kb">compress</a>.</p>
 
-      <h2>What to Do When Compression Makes Your Image Look Terrible</h2>
+      <h2 id="fix-quality">What to Do When Compression Makes Your Image Look Terrible</h2>
 
       <p>Over-compression is a real problem. If you push a photo below its quality floor, you get visible blockiness — especially around facial features. Here's how to avoid it:</p>
 
-      <p><strong>The 65% quality rule.</strong> For passport-style photos at 200 × 230 pixels, JPEG quality between 65% and 80% almost always lands within the 20–50 KB range. Drop below 60% and you risk visible degradation that could trigger a rejection during document verification — not at upload, but later when a human examiner reviews your file.</p>
-
-      <p><strong>Signatures have more headroom.</strong> Because they're mostly white with thin black lines, signatures can handle more aggressive compression. A 140 × 60 pixel signature at 70% quality typically produces a 12–15 KB file that's perfectly legible.</p>
+      <div class="callout">
+        <p><strong>The 65% quality rule.</strong> For passport-style photos at 200 × 230 pixels, JPEG quality between 65% and 80% almost always lands within the 20–50 KB range. Drop below 60% and you risk visible degradation that could trigger a rejection during document verification — not at upload, but later when a human examiner reviews your file.</p>
+        <p><strong>Signatures have more headroom.</strong> Because they're mostly white with thin black lines, signatures can handle more aggressive compression. A 140 × 60 pixel signature at 70% quality typically produces a 12–15 KB file that's perfectly legible.</p>
+      </div>
 
       <p><strong>If the file is still too large after compression:</strong></p>
 
@@ -201,7 +217,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <li><a href="/metadata/remover">Strip EXIF metadata</a>. Camera apps embed GPS coordinates, device info, and colour profiles into image files. This metadata can add 10–50 KB. Most compression tools, including Filekrush, strip this automatically.</li>
       </ul>
 
-      <h2>Common Rejection Reasons Beyond File Size</h2>
+      <h2 id="other-rejections">Common Rejection Reasons Beyond File Size</h2>
 
       <p>Even with perfect file size and dimensions, your upload can still be rejected. These are the content-level issues portals flag:</p>
 
@@ -215,7 +231,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
       <p><strong>Photo older than 6 months.</strong> Most portals require a recent photograph. UPSC specifies the photo must not be older than 10 days from the application date — by far the strictest rule among all government bodies.</p>
 
-      <h2>Key Takeaways</h2>
+      <h2 id="key-takeaways">Key Takeaways</h2>
 
       <ol>
         <li><strong>Every portal has different specs.</strong> SSC/IBPS photos need 200 × 230 px at <a href="/compress/to-50kb">20–50 KB</a>. UPSC needs square photos at 350+ px and 20–300 KB. PAN Card dimensions are the reverse of Aadhaar. Always check the notification for your specific exam.</li>

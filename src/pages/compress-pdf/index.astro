@@ -10,24 +10,80 @@ import { relatedTools } from '../../data/related-tools';
   description="Compress PDF files to reduce file size. Works best on scanned documents and image-heavy PDFs. No upload, runs in your browser."
   canonical="/compress-pdf"
   heading="Compress PDF"
-  subheading="Reduce PDF file size — free, private, instant."
+  subheading="Reduce PDF file size for email, uploads, and forms — free, private, instant."
 >
   <CompressPdf client:only="react" />
 
   <Fragment slot="content">
     <section class="prose prose-gray max-w-none">
-      <h2>How it works</h2>
+      <div class="toc">
+        <p>On this page</p>
+        <ul>
+          <li><a href="#compression-levels">Which compression level do I need?</a></li>
+          <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="#what-gets-compressed">What gets compressed</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+
+      <h2 id="compression-levels">Which compression level do I need?</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Level</th>
+            <th>Best for</th>
+            <th>Trade-off</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Maximum</td>
+            <td><a href="/compress-pdf/for-email/">Email attachments</a>, portals with strict upload limits</td>
+            <td>Smallest possible file; scanned text and images may look visibly softer.</td>
+          </tr>
+          <tr>
+            <td>Balanced</td>
+            <td>Most uploads — resumes, applications, general sharing</td>
+            <td>Noticeable size reduction with quality that still looks clean.</td>
+          </tr>
+          <tr>
+            <td>Light</td>
+            <td>Archival copies, documents where clarity matters most</td>
+            <td>Smallest size reduction, but preserves quality closest to the original.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout">
+        <p><strong>Sending a scanned document by email?</strong> Scanned PDFs are often 5-20MB because each page is stored as a high-resolution image. Maximum compression on a scanned document routinely cuts it by 80-90% with barely visible quality loss — see the <a href="/compress-pdf/for-email/">compress PDF for email</a> guide.</p>
+      </div>
+
+      <h2 id="how-it-works">How it works</h2>
       <ol>
         <li><strong>Drop your PDF</strong> — supports any PDF file up to 50MB.</li>
         <li><strong>Choose compression level</strong> — Maximum for smallest size, Balanced for most uses, Light for best quality.</li>
         <li><strong>Download</strong> — your compressed PDF is ready instantly.</li>
       </ol>
 
-      <h2>What gets compressed?</h2>
-      <p>This tool re-encodes the images embedded inside your PDF at lower quality and smaller dimensions. It works best on scanned documents, photo-heavy PDFs, and documents with large embedded images. Text-only PDFs may see little to no size reduction.</p>
+      <h2 id="what-gets-compressed">What gets compressed</h2>
+      <p>This tool re-encodes the images embedded inside your PDF at lower quality and smaller dimensions. It works best on scanned documents, photo-heavy PDFs, and documents with large embedded images. Text-only PDFs — reports, contracts, forms typed directly into a document — may see little to no size reduction, since there's no image data to compress.</p>
 
-      <h2>Is it safe?</h2>
-      <p>Yes. Your PDF is processed entirely in your browser. The file never leaves your device. No server, no storage, no tracking.</p>
+      <h2 id="faq">FAQ</h2>
+
+      <h3>Why didn't my PDF get smaller?</h3>
+      <p>If your PDF is mostly typed text with no embedded images, there's very little to compress — text itself takes up almost no space. Compression makes the biggest difference on scanned pages, photos, or PDFs exported with high-resolution images.</p>
+
+      <h3>Will compression make scanned text unreadable?</h3>
+      <p>At Balanced or Light settings, no — text stays legible. At Maximum, very fine print can get slightly softer. If your document is text-heavy and you need to preserve maximum clarity, use Light compression instead.</p>
+
+      <h3>Can I compress a password-protected PDF?</h3>
+      <p>No — Filekrush needs to read the PDF's content to compress it, which isn't possible while it's encrypted. Remove the password first using a PDF editor, then compress.</p>
+
+      <h3>Is there a size limit?</h3>
+      <p>Filekrush handles PDFs up to 50MB. Since everything runs in your browser, very large files may just take longer to process depending on your device.</p>
+
+      <h3>Does compressing change the number of pages or the text content?</h3>
+      <p>No. Compression only affects how embedded images are encoded — page count, text, and layout stay exactly the same.</p>
     </section>
 
     <RelatedTools title="PDF compression options" tools={relatedTools.compressPdf} />

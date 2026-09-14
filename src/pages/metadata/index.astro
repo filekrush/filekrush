@@ -16,11 +16,84 @@ import { relatedTools } from '../../data/related-tools';
 
   <Fragment slot="content">
     <section class="prose prose-gray max-w-none">
-      <h2>What is EXIF metadata?</h2>
-      <p>Photos contain hidden data called EXIF metadata: camera model, lens, settings, date, time, and often GPS coordinates. This data is invisible when viewing the photo but can be extracted by anyone who has the file.</p>
+      <div class="toc">
+        <p>On this page</p>
+        <ul>
+          <li><a href="#what-is-exif">What is EXIF metadata?</a></li>
+          <li><a href="#who-should-care">Who should check their photos?</a></li>
+          <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
 
-      <h2>Why does this matter?</h2>
-      <p>GPS coordinates in a photo taken at home reveal your home address. Photos taken at work reveal your workplace. Before sharing images publicly, check what data they contain and remove it if needed.</p>
+      <h2 id="what-is-exif">What is EXIF metadata?</h2>
+      <p>Photos contain hidden data called EXIF metadata: camera model, lens, settings, date, time, and often GPS coordinates. This data is invisible when viewing the photo but can be extracted by anyone who has the file — including anyone you send it to or upload it for.</p>
+
+      <div class="callout">
+        <p><strong>GPS coordinates in a photo taken at home reveal your home address.</strong> Photos taken at work reveal your workplace. Before sharing images publicly, check what data they contain and remove it if needed.</p>
+      </div>
+
+      <h2 id="who-should-care">Who should check their photos?</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Situation</th>
+            <th>Risk</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Selling an item online (Marketplace, eBay, Craigslist)</td>
+            <td>Photo GPS data can expose your home address to buyers</td>
+            <td><a href="/metadata/remover/">Strip metadata</a> before posting</td>
+          </tr>
+          <tr>
+            <td>Posting on social media or a dating profile</td>
+            <td>Location and device data attached to public photos</td>
+            <td><a href="/metadata/remover/">Strip metadata</a> before uploading</td>
+          </tr>
+          <tr>
+            <td>Real estate listings</td>
+            <td>Interior photos can leak the property's exact location before it's public</td>
+            <td><a href="/metadata/remover/">Strip metadata</a> from listing photos</td>
+          </tr>
+          <tr>
+            <td>Verifying a photo's authenticity (journalism, evidence)</td>
+            <td>N/A — you need the data, not removal</td>
+            <td><a href="/metadata/viewer/">View metadata</a> to check camera, timestamp, and location</td>
+          </tr>
+          <tr>
+            <td>Submitting a photo to a government form</td>
+            <td>Some portals reject files with embedded metadata bloating the size</td>
+            <td><a href="/metadata/remover/">Strip metadata</a>, then <a href="/compress/for-government/">compress</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 id="how-it-works">How it works</h2>
+      <ol>
+        <li><strong>Drop your photo</strong> — supports JPG, PNG, and WebP.</li>
+        <li><strong>View the data</strong> — see camera model, settings, timestamp, and GPS location if present.</li>
+        <li><strong>Remove it</strong> — strip all metadata and download a clean copy, with the image itself untouched.</li>
+      </ol>
+
+      <h2 id="faq">FAQ</h2>
+
+      <h3>Does removing metadata reduce image quality?</h3>
+      <p>No. Metadata is separate from the pixel data — removing it doesn't touch the visible image at all. It can slightly reduce file size since EXIF data adds a few KB to a few dozen KB.</p>
+
+      <h3>Do screenshots have GPS metadata?</h3>
+      <p>No. Screenshots don't carry camera or location data since they aren't taken with a camera sensor. This mainly applies to photos taken with a phone or camera.</p>
+
+      <h3>Does social media strip metadata automatically?</h3>
+      <p>Most major platforms (Instagram, Facebook, Twitter/X) strip EXIF data on upload, but not all — and messaging apps, email, and direct file sharing usually don't touch it. Don't rely on the platform; strip it yourself if you're unsure.</p>
+
+      <h3>Can I view metadata without removing it?</h3>
+      <p>Yes — use <a href="/metadata/viewer/">the viewer</a> on its own if you just want to inspect a photo's data, for example to confirm when and where it was taken.</p>
+
+      <h3>Is this useful for anything besides privacy?</h3>
+      <p>Yes. Photographers use EXIF data to check camera settings on past shots, and it's sometimes used to verify a photo's origin or timestamp for documentation purposes.</p>
     </section>
 
     <RelatedTools title="Metadata tools" tools={relatedTools.metadata} />

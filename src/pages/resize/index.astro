@@ -10,24 +10,88 @@ import { relatedTools } from '../../data/related-tools';
   description="Resize any image to exact pixel dimensions. Runs in your browser — no upload, no signup. Supports JPG, PNG, WebP."
   canonical="/resize"
   heading="Resize Image"
-  subheading="Resize to exact dimensions — free, private, instant."
+  subheading="Resize to exact pixel dimensions — for social media, forms, listings, or print. Free, private, instant."
 >
   <ResizeImage client:only="react" />
 
   <Fragment slot="content">
     <section class="prose prose-gray max-w-none">
-      <h2>How it works</h2>
+      <div class="toc">
+        <p>On this page</p>
+        <ul>
+          <li><a href="#which-size">Which dimensions do I need?</a></li>
+          <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="#resize-vs-compress">Resize vs. compress</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+
+      <h2 id="which-size">Which dimensions do I need?</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Use case</th>
+            <th>Dimensions</th>
+            <th>Why</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Instagram post / profile photo</td>
+            <td><a href="/resize/to-1080x1080/">1080 &times; 1080</a></td>
+            <td>Square format — Instagram crops anything else to fit.</td>
+          </tr>
+          <tr>
+            <td>YouTube thumbnail / video cover</td>
+            <td><a href="/resize/to-1920x1080/">1920 &times; 1080</a></td>
+            <td>Standard 16:9 widescreen used across most video platforms.</td>
+          </tr>
+          <tr>
+            <td>Passport or ID-style photo</td>
+            <td><a href="/resize/to-600x600/">600 &times; 600</a> or country-specific</td>
+            <td>Most government portals require a square or near-square crop — see the <a href="/passport-photo/">passport photo tool</a> for exact per-country sizes.</td>
+          </tr>
+          <tr>
+            <td>Product listing (Amazon, Etsy, Shopify)</td>
+            <td><a href="/resize/to-800x600/">800 &times; 600</a> or larger</td>
+            <td>Marketplaces set a minimum pixel size so zoom/crop features still look sharp.</td>
+          </tr>
+          <tr>
+            <td>Small thumbnail / avatar</td>
+            <td><a href="/resize/to-300x300/">300 &times; 300</a></td>
+            <td>Enough resolution for a small display slot without wasted file weight.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout">
+        <p><strong>Uploading to a government form?</strong> Dimensions alone usually aren't enough — most portals also cap the file in KB. Resize first, then use <a href="/compress/for-government/">Compress for Government Forms</a> to hit both requirements.</p>
+      </div>
+
+      <h2 id="how-it-works">How it works</h2>
       <ol>
         <li><strong>Drop your image</strong> — supports JPG, PNG, and WebP files.</li>
         <li><strong>Set dimensions</strong> — type exact pixels or pick a preset. Lock aspect ratio if needed.</li>
         <li><strong>Download</strong> — your resized image is ready instantly.</li>
       </ol>
 
-      <h2>Why resize images?</h2>
-      <p>Job applications, online forms, social media profiles, and e-commerce listings often require images at specific dimensions. Resizing to exact pixels ensures your image meets requirements without distortion.</p>
+      <h2 id="resize-vs-compress">Resize vs. compress — they're not the same thing</h2>
+      <p><strong>Resizing</strong> changes an image's pixel dimensions (width and height). <strong>Compressing</strong> reduces its file size in KB by adjusting how much data it stores, without necessarily changing dimensions. A photo can be the exact right pixel size and still be too many KB, or the right KB and the wrong shape.</p>
+      <p>If a form or platform specifies both a pixel size and a KB limit — most government portals do — resize to the exact dimensions first, then <a href="/compress/">compress</a> to the KB target. Doing only one of the two is the most common reason uploads get rejected.</p>
 
-      <h2>Is it safe?</h2>
-      <p>Yes. Everything runs in your browser. No files are uploaded to any server.</p>
+      <h2 id="faq">FAQ</h2>
+
+      <h3>Will resizing distort my photo?</h3>
+      <p>Only if you resize to a different aspect ratio than the original without cropping. Filekrush lets you lock the aspect ratio so the image scales proportionally, or crop manually if you need an exact non-matching ratio (like a square crop from a landscape photo).</p>
+
+      <h3>Does resizing reduce file size too?</h3>
+      <p>Usually, yes — fewer pixels generally means fewer bytes. But not always by enough. If you need an exact KB target, resize first, then use <a href="/compress/">Compress Image</a> to hit it precisely.</p>
+
+      <h3>What's the largest size I can resize up to?</h3>
+      <p>You can resize to any dimensions, but enlarging a small image beyond its original resolution will make it blurry — resizing can't add detail that wasn't captured in the original photo.</p>
+
+      <h3>Can I resize multiple images at once?</h3>
+      <p>Filekrush resizes one image at a time in the browser. For bulk resizing, note the dimensions you need here, then apply them in a batch tool like Photoshop, ImageMagick, or your CMS's built-in image processor.</p>
     </section>
 
     <RelatedTools title="Other resize dimensions" tools={relatedTools.resize} />

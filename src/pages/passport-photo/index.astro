@@ -16,7 +16,62 @@ import { relatedTools } from '../../data/related-tools';
 
   <Fragment slot="content">
     <section class="prose prose-gray max-w-none">
-      <h2>How it works</h2>
+      <div class="toc">
+        <p>On this page</p>
+        <ul>
+          <li><a href="#countries">Supported countries</a></li>
+          <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="#why-it-matters">Why exact specs matter</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+
+      <h2 id="countries">Supported countries</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Country</th>
+            <th>Photo size</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="/passport-photo/india/">India</a></td>
+            <td>51 &times; 51mm</td>
+          </tr>
+          <tr>
+            <td><a href="/passport-photo/usa/">United States</a></td>
+            <td>51 &times; 51mm (2 &times; 2in)</td>
+          </tr>
+          <tr>
+            <td><a href="/passport-photo/uk/">United Kingdom</a></td>
+            <td>35 &times; 45mm</td>
+          </tr>
+          <tr>
+            <td><a href="/passport-photo/schengen/">Schengen Visa</a></td>
+            <td>35 &times; 45mm</td>
+          </tr>
+          <tr>
+            <td><a href="/passport-photo/canada/">Canada</a></td>
+            <td>50 &times; 70mm</td>
+          </tr>
+          <tr>
+            <td><a href="/passport-photo/australia/">Australia</a></td>
+            <td>35 &times; 45mm</td>
+          </tr>
+          <tr>
+            <td><a href="/passport-photo/japan/">Japan</a></td>
+            <td>35 &times; 45mm</td>
+          </tr>
+          <tr>
+            <td><a href="/passport-photo/china/">China</a></td>
+            <td>33 &times; 48mm</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Don't see your country? More are coming soon — in the meantime, pick the closest match above and adjust manually, or use <a href="/resize/">Resize Image</a> with your country's exact dimensions.</p>
+
+      <h2 id="how-it-works">How it works</h2>
       <ol>
         <li><strong>Select your country</strong> — dimensions are set automatically.</li>
         <li><strong>Drop your photo</strong> — any clear face photo works.</li>
@@ -24,8 +79,26 @@ import { relatedTools } from '../../data/related-tools';
         <li><strong>Download</strong> — your passport photo is ready at the exact required size.</li>
       </ol>
 
-      <h2>Supported countries</h2>
-      <p>India (51×51mm), United States (51×51mm), United Kingdom (35×45mm), Schengen Visa (35×45mm), Canada (50×70mm), Australia (35×45mm), Japan (35×45mm), China (33×48mm). More countries coming soon.</p>
+      <h2 id="why-it-matters">Why exact specs matter</h2>
+      <p>Passport and visa photos aren't just about looking presentable — printing labs and government portals check dimensions, aspect ratio, face coverage, and background color against a strict spec. A photo that's the wrong size or has a shadowed background gets your application bounced back, costing days you may not have before a deadline.</p>
+      <p>If you're applying online rather than printing a physical photo, the portal usually also caps the file in KB. Once you've cropped to the right dimensions here, run the download through <a href="/compress/for-government/">Compress for Government Forms</a> if the file is too large to upload.</p>
+
+      <h2 id="faq">FAQ</h2>
+
+      <h3>Can I use a selfie?</h3>
+      <p>It's not recommended. Front-camera selfies taken up close introduce lens distortion that skews your face proportions during cropping. Use the rear camera at arm's length, or have someone else take the photo, against a plain white or light background.</p>
+
+      <h3>Does the background need to be pure white?</h3>
+      <p>For most countries, yes — a plain white or off-white background is required, with no shadows or patterns. Some countries (like the UK) allow light grey. Check your specific country page for the exact requirement.</p>
+
+      <h3>Can I wear glasses in the photo?</h3>
+      <p>Most countries now prohibit glasses in passport and visa photos, even if you normally wear them, due to glare and eye-visibility requirements. Remove glasses before photographing.</p>
+
+      <h3>My country's portal also has a file size limit — what do I do?</h3>
+      <p>Download your cropped photo here first, then run it through <a href="/compress/for-government/">Compress for Government Forms</a> to hit the exact KB range your portal specifies. Resize (dimensions) and compress (file size) are separate steps — you often need both.</p>
+
+      <h3>Will this guarantee my application gets accepted?</h3>
+      <p>This tool matches your photo to publicly documented dimension specs, but final acceptance depends on the reviewing authority. Always double check current requirements against your country's official guidance before submitting.</p>
     </section>
 
     <RelatedTools title="Passport photo by country" tools={relatedTools.passportPhoto} />
