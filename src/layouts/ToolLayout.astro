@@ -23,6 +23,9 @@ const { title, description, canonical, heading, subheading } = Astro.props;
       <slot />
     </div>
 
-    <slot name="content" />
+    <div class="pt-10 border-t" style="border-color: var(--brand-light);">
+      <p class="text-[13px] font-semibold uppercase tracking-wide mb-6" style="color: var(--text-secondary);">Guide</p>
+      <slot name="content" />
+    </div>
   </section>
 </BaseLayout>
