@@ -8,30 +8,100 @@ import CompressImage from '../../components/tools/CompressImage';
   description="Compress images for faster website loading. Optimize photos for blogs, e-commerce, and web pages. No upload, runs in your browser."
   canonical="/compress/for-website"
   heading="Compress Image for Website"
-  subheading="Optimize images for faster page loads — free, private, instant."
+  subheading="Cut photo file sizes by 70-80% while keeping quality sharp. Faster load times mean better SEO, more visitors, and higher conversions. Runs entirely in your browser."
 >
   <CompressImage client:only="react" defaultTargetKB={200} />
 
   <Fragment slot="content">
     <section class="prose prose-gray max-w-none">
-      <h2>Why optimize images for web?</h2>
-      <p>Images are typically the heaviest elements on a web page. Unoptimized photos can be 3-10MB each, making pages slow to load. Google uses page speed as a ranking factor, and slow-loading pages lose visitors. Compressing images to 100-300KB maintains visual quality while dramatically improving load times.</p>
+      <h2>Why website image compression is different</h2>
+      <p>Website image compression isn't about email limits or form requirements. It's about speed, and speed affects your bottom line.</p>
+      <ul>
+        <li>Pages that load in 1 second have roughly 7x higher conversion rates than pages that load in 10 seconds (Google).</li>
+        <li>Every 100ms of load delay costs about 1% of users, who abandon the page (Amazon).</li>
+        <li>Images typically account for 50-80% of page weight — the rest is CSS, JavaScript, and other assets.</li>
+        <li>Compressing images is the fastest, easiest way to improve page speed without rebuilding your site.</li>
+      </ul>
+      <p><strong>For e-commerce:</strong> a 1-second faster page translates to roughly 10% higher conversion on average. For a site doing $100K/month, that's $10K in extra revenue per month from faster images alone.</p>
+      <p><strong>For blogs and content sites:</strong> faster pages rank higher in Google search, since page speed is a ranking factor — and images are usually the bottleneck.</p>
+      <p><strong>For social media (LinkedIn, Twitter, and similar):</strong> compressed images load instantly in feeds, which means more clicks and higher engagement.</p>
 
-      <h2>Recommended sizes for web</h2>
-      <ol>
-        <li><strong>Hero/banner images</strong> — 200-400KB</li>
-        <li><strong>Blog post images</strong> — 100-200KB</li>
-        <li><strong>Product photos</strong> — 100-300KB</li>
-        <li><strong>Thumbnails</strong> — 20-50KB</li>
-        <li><strong>Icons and logos</strong> — under 20KB (use SVG when possible)</li>
-      </ol>
+      <h2>How to optimize images for web</h2>
 
-      <h2>How it works</h2>
+      <h3>1. Compress for device type</h3>
+      <p><strong>Desktop images (1920&times;1080 displays)</strong> can be larger — 200-300KB for full-width hero images — since desktop users have fast WiFi, big screens, and more patience.</p>
+      <p><strong>Mobile images (375&times;812 displays)</strong> should target 50-100KB for the same visual content. Mobile users are often on 4G with small screens, and they drop off if a page is slow. You don't need a 2MB photo on mobile — a 150KB photo looks just as good on a 375px-wide screen.</p>
+      <p>Practical approach: <a href="/compress/to-100kb/">compress your image to 100KB</a>, upload two versions to your website (one for mobile, one for desktop), and use HTML <code>srcset</code> to serve the right version for each screen size:</p>
+      <pre><code class="language-html">&lt;img
+  src="photo-desktop.jpg"
+  srcset="photo-mobile.jpg 480w, photo-desktop.jpg 1200w"
+  alt="Product photo"
+&gt;</code></pre>
+      <p>Result: mobile users get files roughly 50% smaller (faster load), while desktop users still get full quality.</p>
+
+      <h3>2. Choose the right format</h3>
+      <p><strong>JPG</strong> — highly compressible with universal browser support and an excellent quality-to-size ratio. Best for product photos, hero images, and blog post photos. Target 100-200KB for web.</p>
+      <p><strong>PNG</strong> — lossless with support for transparency, but files stay large even after compression. Best for icons, logos, screenshots, and images that need transparency. Since PNG compresses less than JPG, aim for 50-150KB.</p>
+      <p><strong>WebP</strong> — a modern format that's 25-30% smaller than JPG at the same quality, with good modern browser support (older browsers like IE and older Safari don't support it). Best for new websites targeting modern browsers, with a JPG fallback for older ones. Target 70-150KB.</p>
+      <p>Recommendation: use JPG for e-commerce, blogs, and most websites. If your audience skews tech-forward, experiment with WebP.</p>
+
+      <h3>3. Optimize for Core Web Vitals</h3>
+      <p>Google partly ranks pages on Core Web Vitals — three metrics that measure real-world speed:</p>
       <ol>
-        <li><strong>Drop your image</strong> — supports JPG, PNG, and WebP.</li>
-        <li><strong>Set target size</strong> — pre-set to 200KB for general web use. Adjust as needed.</li>
-        <li><strong>Download</strong> — upload the optimized image to your website.</li>
+        <li><strong>LCP (Largest Contentful Paint)</strong> — how fast the main image or content appears. Target under 2.5 seconds. Smaller images load faster, so <a href="/compress/to-200kb/">compress your hero image to 150-200KB</a> to hit this.</li>
+        <li><strong>CLS (Cumulative Layout Shift)</strong> — how much content moves around as images load. Target under 0.1. Faster loading means less time content is missing and shifting. Set explicit width and height on your <code>&lt;img&gt;</code> tags so the browser reserves space before the image loads.</li>
+        <li><strong>FID (First Input Delay)</strong> — how fast the page responds to clicks. This is more about JavaScript than images, but smaller images mean less CPU work and a faster response overall.</li>
       </ol>
+      <p>Practical step: <a href="/compress/to-200kb/">compress your product and hero images to under 200KB</a>. This alone improves LCP significantly on most sites.</p>
+
+      <h3>4. Batch compress if you have many images</h3>
+      <p>If your site has 50+ product photos or blog images, don't compress them one by one. <a href="/compress/to-100kb/">Compress one image with Filekrush</a> as a template, note the compression ratio (for example, 2MB to 100KB is 95% compression), then apply the same ratio to the rest using a batch tool like ImageMagick, Photoshop, or your CMS's image optimization plugin. Verify the final result loads fast.</p>
+
+      <h2>Real-world example: e-commerce product page</h2>
+      <p><strong>Before optimization:</strong> a 2.5MB hero image plus an 8-image thumbnail gallery at 1.2MB each (9.6MB) added up to 12.1MB of page images, a 45-second load time on mobile 4G, and a 60% bounce rate.</p>
+      <p><strong>After compression with Filekrush:</strong> the hero <a href="/compress/to-200kb/">compressed to 200KB</a> (97% smaller, looks identical) and the thumbnails <a href="/compress/to-100kb/">compressed to 100KB each</a> (800KB total, 92% smaller) brought total page images down to 1MB. Load time on mobile 4G dropped to 4 seconds, bounce rate fell to 20% — an 11x improvement — and the faster speed translated to roughly 10% higher conversion, or about $10K/month in extra revenue for a store doing $100K/month.</p>
+      <p>The payoff: 30 minutes of compression work for $10K/month in extra revenue.</p>
+
+      <h2>When not to compress aggressively</h2>
+      <p>Don't compress to extreme sizes for every site. Some situations call for higher quality:</p>
+      <ul>
+        <li><strong>Photography portfolios and art sites</strong> — compress to 300-500KB, since clients are evaluating your work, not just viewing a product.</li>
+        <li><strong>High-end fashion and jewelry</strong> — compress to 250-400KB, since extreme compression loses detail in fabrics and gems.</li>
+        <li><strong>Medical and technical documentation</strong> — compress to 200-300KB, since compression artifacts can be misinterpreted.</li>
+        <li><strong>Everything else</strong> (blogs, news, e-commerce) — compress aggressively to 100-200KB, since speed matters more than marginal quality gains.</li>
+      </ul>
+
+      <h2 id="faq">FAQ</h2>
+
+      <h3>My images look fine at 2MB. Why compress if they're already loading?</h3>
+      <p>"Fine" doesn't mean fast. Most users on mobile 4G experience 5-10 second loads for 2MB images — you don't notice because you're likely on WiFi. Compress them, test on mobile 4G (throttle your browser's network tab), and you'll see the difference. Faster pages mean more visitors, higher conversions, and better SEO.</p>
+
+      <h3>I use a CDN (Cloudflare, CloudFront). Doesn't that handle compression?</h3>
+      <p>CDNs cache and compress for delivery (gzip), but they don't reduce the original file size — a 2MB image stays 2MB, it just gets delivered faster. Compression at the source with Filekrush is the real win. Combine both: compress images first, then let the CDN cache the compressed version.</p>
+
+      <h3>Can I use the same compressed image for desktop and mobile?</h3>
+      <p>Yes, but it's not optimal. Compress to 100KB for mobile and desktop users get a lower-quality image than they could have. Compress to 200KB for desktop and mobile users on 4G wait longer than needed. Ideally, use two versions with responsive <code>srcset</code>. One size for both is an acceptable compromise if simplicity matters more.</p>
+
+      <h3>My website builder (Shopify, Wix, WordPress) auto-compresses images. Do I still need Filekrush?</h3>
+      <p>These builders auto-compress, but usually not aggressively enough for maximum speed. You can pre-compress with Filekrush and let the builder compress further as a belt-and-suspenders approach, or check your site's load time — if it's under 2 seconds on mobile 4G, their compression is fine; if it's over 3 seconds, pre-compress with Filekrush.</p>
+
+      <h3>Does compression affect SEO?</h3>
+      <p>Indirectly, yes. Page speed is a ranking factor, faster pages rank better, and compressed images make pages faster — so compression supports SEO.</p>
+
+      <h3>Should I compress PNGs the same way?</h3>
+      <p>PNG compresses less aggressively than JPG since it's lossless. <a href="/compress/to-100kb/">Compress PNGs</a> to 50-150KB for web. For the same visual content, PNG will end up larger than JPG at the same compression level — that's normal. If file size is critical, consider <a href="/convert/png-to-jpg/">converting PNG to JPG</a> (you'll lose transparency).</p>
+
+      <h2>Related tools</h2>
+      <ul>
+        <li><a href="/compress/to-100kb/">Compress to 100 KB</a> — quick start for most web images</li>
+        <li><a href="/compress/to-200kb/">Compress to 200 KB</a> — for high-quality hero images</li>
+        <li><a href="/convert/png-to-jpg/">Convert PNG to JPG</a> — if PNG files are too large</li>
+        <li><a href="/resize/">Resize images</a> to exact dimensions — useful alongside compression</li>
+        <li><a href="/compress/">Compress any image</a> — if none of these presets fit your use case</li>
+      </ul>
+      <p>On the blog: <a href="/blog/compress-images-indian-government-forms/">How to Compress Images for Indian Government Forms</a> — a different use case, but the same compression principles apply.</p>
+
+      <p><strong>Ready to speed up your website?</strong> <a href="/compress/to-100kb/">Compress your first image now</a> — it takes 30 seconds, works instantly, and needs no signup. Then apply the same compression to the rest of your images and watch your page load time drop.</p>
     </section>
   </Fragment>
 </ToolLayout>

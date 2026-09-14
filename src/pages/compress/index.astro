@@ -10,24 +10,64 @@ import { relatedTools } from '../../data/related-tools';
   description="Compress any image to your target file size. Runs in your browser — no upload, no signup. Supports JPG, PNG, WebP."
   canonical="/compress"
   heading="Compress Image"
-  subheading="Reduce any image to your exact target size — free, private, instant."
+  subheading="Compress images to exactly the size you need — for email, government forms, social media, or web uploads. Pick your use case below, get exact specs, compress instantly. No upload, no signup."
 >
   <CompressImage client:only="react" />
 
   <Fragment slot="content">
     <section class="prose prose-gray max-w-none">
+      <h2>Which compression size do I need?</h2>
+
+      <h3>Email attachments?</h3>
+      <p>Most email providers limit attachments to 20-50MB, so a single photo is rarely the problem. But if you're sending 20 photos to someone, the total size adds up fast. <strong>Recommendation:</strong> compress to 200-500KB per photo.</p>
+      <p><a href="/compress/to-200kb/">Compress to 200 KB &rarr;</a> | <a href="/compress/to-500kb/">Compress to 500 KB &rarr;</a></p>
+
+      <h3>Government forms (Aadhaar, Passport, PAN, exam applications)?</h3>
+      <p>Government portals enforce strict size limits, usually 20-100KB per photo. Too large and the form rejects it automatically. Too small and quality drops enough to fail facial recognition checks. <strong>Recommendation:</strong> use the exact size your form specifies.</p>
+      <p><a href="/compress/for-government/">Compress for Government Forms &rarr;</a> (step-by-step guide with exact KB per form) — or <a href="/compress/to-50kb/">Compress to 50 KB &rarr;</a> | <a href="/compress/to-100kb/">Compress to 100 KB &rarr;</a></p>
+
+      <h3>Social media (Instagram, Facebook, LinkedIn)?</h3>
+      <p>Platforms auto-compress everything you upload, so pushing a huge original doesn't buy you extra quality. <strong>Recommendation:</strong> keep photos under 1-2MB for a fast upload.</p>
+      <p><a href="/compress/to-1mb/">Compress to 1 MB &rarr;</a> | <a href="/compress/to-500kb/">Compress to 500 KB &rarr;</a></p>
+
+      <h3>Website or blog (your own site, Shopify, WordPress)?</h3>
+      <p>File size directly impacts page load speed, especially on mobile. Smaller photos mean faster load times, which helps both SEO and user experience. <strong>Recommendation:</strong> compress to 100-200KB for product photos, 50KB for thumbnails — aim to load in under 1 second on mobile 4G.</p>
+      <p><a href="/compress/to-100kb/">Compress to 100 KB &rarr;</a> | <a href="/compress/to-50kb/">Compress to 50 KB &rarr;</a></p>
+
       <h2>How it works</h2>
       <ol>
-        <li><strong>Drop your image</strong> — supports JPG, PNG, and WebP files up to 50MB.</li>
-        <li><strong>Set your target size</strong> — choose from presets or type an exact KB value.</li>
-        <li><strong>Download</strong> — your compressed image is ready instantly.</li>
+        <li><strong>Choose your target size</strong> — based on your use case above. Not sure? Use the decision guide.</li>
+        <li><strong>Upload your photo</strong> — drag and drop or click to upload. JPG, PNG, and WebP supported. Your file stays on your device — nothing is uploaded to a server.</li>
+        <li><strong>Compress instantly</strong> — Filekrush adjusts quality and resolution together to hit your exact target size without making the photo look terrible. You'll see the before/after comparison.</li>
+        <li><strong>Download and use</strong> — upload the compressed file to your form, email, or website. Done.</li>
       </ol>
 
-      <h2>Why compress images?</h2>
-      <p>Many websites, government portals, and application forms have strict file size limits. Email attachments are often capped at a few MB. Compressed images load faster on websites, improving user experience and SEO performance.</p>
+      <h2>Why compression matters</h2>
+      <p>File size isn't arbitrary — here's why each use case has a different target.</p>
+      <p><strong>For government forms:</strong> portals reject oversized files automatically due to storage limits, while undersized files become blurry and fail facial recognition checks. You need the sweet spot: exact size, readable quality.</p>
+      <p><strong>For email:</strong> your recipient's inbox quota matters. Sending 10 photos at 5MB each instead of 500KB uses 45MB more of their space than it needs to. Compression is respect.</p>
+      <p><strong>For web and social:</strong> slow websites lose visitors — every 100ms of load delay costs roughly 1% of users. Compressed images load 3-5x faster than originals while keeping quality high, so your site stays fast and looks good.</p>
+      <p><strong>For mobile users specifically:</strong> mobile 4G networks are around 10x slower than desktop WiFi. A 2MB photo takes about 5 seconds to load on 4G; compressed to 200KB, it loads in under 1 second. That's the difference between someone viewing your content or closing the tab.</p>
 
-      <h2>Is it safe?</h2>
-      <p>Yes. Filekrush processes everything in your browser. Your images are never uploaded to any server. Once you close the tab, the data is gone.</p>
+      <h2 id="faq">FAQ</h2>
+
+      <h3>Won't compressing ruin my photo quality?</h3>
+      <p>It depends on your target size and original quality. Filekrush uses intelligent scaling: compress to 100KB and it keeps quality high while scaling down resolution slightly. Compress to 20KB (extreme) and quality drops more noticeably. For most use cases — email, web, social — the difference is invisible. Government forms tend to require higher KB targets (50-100KB), so quality stays high there too.</p>
+
+      <h3>My photo is already 50KB but I need 20KB for a government form. Will it look terrible?</h3>
+      <p>At 20KB, quality will drop noticeably — most photos do at that size. But if a government form requires 20KB, that's the limit set by their system, and Filekrush will compress to that target so the form accepts it. If the form then rejects it for quality reasons, try the next size up if it's allowed.</p>
+
+      <h3>Should I keep the original or delete it after compressing?</h3>
+      <p>Keep the original. Compression is lossy for JPG — once you compress, you can't get the quality back. If you need to re-compress to a different size later, you'll want to start from the original.</p>
+
+      <h3>Which format compresses best — JPG, PNG, or WebP?</h3>
+      <p>JPG compresses best: smallest file, fastest. PNG stays lossless (no quality loss, but larger files). WebP splits the difference — small file, good quality, but older browsers don't support it. Use JPG for email, government forms, and general web use; PNG for images that need transparency; WebP for modern web projects.</p>
+
+      <h3>Can I compress videos?</h3>
+      <p>No, Filekrush only handles images. For videos, desktop tools like HandBrake or FFmpeg work well.</p>
+
+      <h3>How do I know if my compressed photo will pass a government form's automatic checks?</h3>
+      <p>Upload it and try. If it's rejected, the error message (if the portal gives one) will usually say the file is too large, too small, or the wrong format — adjust based on that and retry.</p>
     </section>
 
     <RelatedTools title="Other compression sizes" tools={relatedTools.compress} />
