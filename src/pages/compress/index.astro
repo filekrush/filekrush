@@ -16,38 +16,91 @@ import { relatedTools } from '../../data/related-tools';
 
   <Fragment slot="content">
     <section class="prose prose-gray max-w-none">
-      <h2>Which compression size do I need?</h2>
+      <div class="toc">
+        <p>On this page</p>
+        <ul>
+          <li><a href="#decision-guide">Which size do I need?</a></li>
+          <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="#why-it-matters">Why compression matters</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
 
-      <h3>Email attachments?</h3>
-      <p>Most email providers limit attachments to 20-50MB, so a single photo is rarely the problem. But if you're sending 20 photos to someone, the total size adds up fast. <strong>Recommendation:</strong> compress to 200-500KB per photo.</p>
-      <p><a href="/compress/to-200kb/">Compress to 200 KB &rarr;</a> | <a href="/compress/to-500kb/">Compress to 500 KB &rarr;</a></p>
+      <h2 id="decision-guide">Which compression size do I need?</h2>
 
-      <h3>Government forms (Aadhaar, Passport, PAN, exam applications)?</h3>
-      <p>Government portals enforce strict size limits, usually 20-100KB per photo. Too large and the form rejects it automatically. Too small and quality drops enough to fail facial recognition checks. <strong>Recommendation:</strong> use the exact size your form specifies.</p>
-      <p><a href="/compress/for-government/">Compress for Government Forms &rarr;</a> (step-by-step guide with exact KB per form) — or <a href="/compress/to-50kb/">Compress to 50 KB &rarr;</a> | <a href="/compress/to-100kb/">Compress to 100 KB &rarr;</a></p>
+      <table>
+        <thead>
+          <tr>
+            <th>Use case</th>
+            <th>Recommended size</th>
+            <th>Why</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Email attachments</td>
+            <td><a href="/compress/to-200kb/">200 KB</a> – <a href="/compress/to-500kb/">500 KB</a> per photo</td>
+            <td>Providers cap total attachments at 20-50MB — sending several photos adds up fast.</td>
+          </tr>
+          <tr>
+            <td>Government forms (Aadhaar, Passport, PAN, exams)</td>
+            <td><a href="/compress/to-50kb/">50 KB</a> – <a href="/compress/to-100kb/">100 KB</a>, exact per form</td>
+            <td>Oversized files are rejected automatically; undersized ones get too blurry to pass checks.</td>
+          </tr>
+          <tr>
+            <td>Social media (Instagram, Facebook, LinkedIn)</td>
+            <td><a href="/compress/to-500kb/">500 KB</a> – <a href="/compress/to-1mb/">1 MB</a></td>
+            <td>Platforms re-encode everything you upload, so extra original quality is wasted.</td>
+          </tr>
+          <tr>
+            <td>Website or blog (own site, Shopify, WordPress)</td>
+            <td><a href="/compress/to-50kb/">50 KB</a> – <a href="/compress/to-100kb/">100-200 KB</a></td>
+            <td>File size drives page load speed — smaller images mean faster pages and better SEO.</td>
+          </tr>
+        </tbody>
+      </table>
 
-      <h3>Social media (Instagram, Facebook, LinkedIn)?</h3>
-      <p>Platforms auto-compress everything you upload, so pushing a huge original doesn't buy you extra quality. <strong>Recommendation:</strong> keep photos under 1-2MB for a fast upload.</p>
-      <p><a href="/compress/to-1mb/">Compress to 1 MB &rarr;</a> | <a href="/compress/to-500kb/">Compress to 500 KB &rarr;</a></p>
+      <div class="callout">
+        <p><strong>Not sure which one applies to you?</strong> Government forms have the tightest, most specific limits — see the <a href="/compress/for-government/">step-by-step government forms guide</a>. Optimizing for your own website? See the <a href="/compress/for-website/">web performance guide</a> for device-specific targets and format advice.</p>
+      </div>
 
-      <h3>Website or blog (your own site, Shopify, WordPress)?</h3>
-      <p>File size directly impacts page load speed, especially on mobile. Smaller photos mean faster load times, which helps both SEO and user experience. <strong>Recommendation:</strong> compress to 100-200KB for product photos, 50KB for thumbnails — aim to load in under 1 second on mobile 4G.</p>
-      <p><a href="/compress/to-100kb/">Compress to 100 KB &rarr;</a> | <a href="/compress/to-50kb/">Compress to 50 KB &rarr;</a></p>
-
-      <h2>How it works</h2>
+      <h2 id="how-it-works">How it works</h2>
       <ol>
-        <li><strong>Choose your target size</strong> — based on your use case above. Not sure? Use the decision guide.</li>
+        <li><strong>Choose your target size</strong> — based on your use case above. Not sure? Use the table.</li>
         <li><strong>Upload your photo</strong> — drag and drop or click to upload. JPG, PNG, and WebP supported. Your file stays on your device — nothing is uploaded to a server.</li>
         <li><strong>Compress instantly</strong> — Filekrush adjusts quality and resolution together to hit your exact target size without making the photo look terrible. You'll see the before/after comparison.</li>
         <li><strong>Download and use</strong> — upload the compressed file to your form, email, or website. Done.</li>
       </ol>
 
-      <h2>Why compression matters</h2>
-      <p>File size isn't arbitrary — here's why each use case has a different target.</p>
-      <p><strong>For government forms:</strong> portals reject oversized files automatically due to storage limits, while undersized files become blurry and fail facial recognition checks. You need the sweet spot: exact size, readable quality.</p>
-      <p><strong>For email:</strong> your recipient's inbox quota matters. Sending 10 photos at 5MB each instead of 500KB uses 45MB more of their space than it needs to. Compression is respect.</p>
-      <p><strong>For web and social:</strong> slow websites lose visitors — every 100ms of load delay costs roughly 1% of users. Compressed images load 3-5x faster than originals while keeping quality high, so your site stays fast and looks good.</p>
-      <p><strong>For mobile users specifically:</strong> mobile 4G networks are around 10x slower than desktop WiFi. A 2MB photo takes about 5 seconds to load on 4G; compressed to 200KB, it loads in under 1 second. That's the difference between someone viewing your content or closing the tab.</p>
+      <h2 id="why-it-matters">Why compression matters</h2>
+      <p>File size isn't arbitrary — each use case needs a different target for a different reason.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Use case</th>
+            <th>What goes wrong without compression</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Government forms</td>
+            <td>Portals reject oversized files on storage limits; undersized files fail facial recognition checks.</td>
+          </tr>
+          <tr>
+            <td>Email</td>
+            <td>10 photos at 5MB each instead of 500KB use 45MB more of a recipient's inbox quota than needed.</td>
+          </tr>
+          <tr>
+            <td>Web and social</td>
+            <td>Every 100ms of extra load time costs roughly 1% of visitors — slow pages lose people before they see anything.</td>
+          </tr>
+          <tr>
+            <td>Mobile specifically</td>
+            <td>4G is around 10x slower than desktop WiFi — a 2MB photo takes ~5 seconds to load; at 200KB, under 1 second.</td>
+          </tr>
+        </tbody>
+      </table>
 
       <h2 id="faq">FAQ</h2>
 
