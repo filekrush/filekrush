@@ -1,0 +1,29 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import CompressImage from '../../components/tools/CompressImage';
+---
+
+<ToolLayout
+  title="Compress Photo for Aadhaar Update — Under 50KB | Filekrush"
+  description="Compress photos for Aadhaar card online update (UIDAI). Specs: 413x531 pixels at 300 DPI, under 50KB, JPEG. Free, no upload."
+  canonical="/compress/for-aadhaar"
+  heading="Compress Photo for Aadhaar"
+  subheading="413 × 531px (at 300 DPI), under 50KB — JPEG, ready to upload."
+>
+  <CompressImage client:only="react" defaultTargetKB={50} />
+
+  <Fragment slot="content">
+    <section class="prose prose-gray max-w-none">
+      <h2>Aadhaar Photo Requirements (UIDAI Online Update)</h2>
+      <p>Photo dimensions: 413×531 pixels at 300 DPI (3.5cm × 4.5cm). File size: under 50KB. JPEG/JPG only. This is a portrait format, similar to a standard passport photo. White background. Face clearly visible.</p>
+
+      <h2>Aadhaar vs PAN Card dimensions</h2>
+      <p>Aadhaar is portrait (taller than wide): 413×531px. PAN Card via NSDL is landscape (wider than tall): 276×197px. These are opposite orientations — do not reuse the same photo without adjusting. See <a href="/compress/for-pan-card">compress for PAN card</a>.</p>
+
+      <h2>Privacy note</h2>
+      <p>Before uploading photos to any government portal, consider stripping EXIF metadata which may contain GPS coordinates and device information. Use the <a href="/metadata/remover">metadata remover</a>. Filekrush processes everything in your browser — your photo never leaves your device, which is especially important for identity document photos.</p>
+
+      <p class="text-[14px]">Specifications listed here are based on publicly available information as of 2026. Always verify the current requirements from the official exam notification or portal before uploading, as specs can change between recruitment cycles.</p>
+    </section>
+  </Fragment>
+</ToolLayout>

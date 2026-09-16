@@ -1,0 +1,29 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import CompressImage from '../../components/tools/CompressImage';
+---
+
+<ToolLayout
+  title="Compress Photo for UPSC Form — 20-300KB, Square | Filekrush"
+  description="Compress photos for UPSC CSE, NDA, CDS, CAPF forms. Square photo 350-1000px, 20-300KB, JPEG. Free, no upload."
+  canonical="/compress/for-upsc"
+  heading="Compress Photo for UPSC"
+  subheading="350–1000px square, 20–300KB — JPEG, ready to upload."
+>
+  <CompressImage client:only="react" defaultTargetKB={200} />
+
+  <Fragment slot="content">
+    <section class="prose prose-gray max-w-none">
+      <h2>UPSC Photo Requirements (2026)</h2>
+      <p>UPSC is different from SSC and IBPS. Photo must be square: minimum 350×350 pixels, maximum 1000×1000 pixels. File size: 20-300KB. JPEG/JPG only. White or off-white background. Face must cover approximately 75% of the frame. No spectacles (enforced since 2022). The 2026 notification also requires the candidate's name and date to appear at the bottom of the photograph. Photo must be recent — some UPSC notifications specify no older than 10 days from application date.</p>
+
+      <h2>UPSC Signature Requirements</h2>
+      <p>This is unique. UPSC requires THREE signatures stacked vertically on a single white sheet, scanned as one image. Dimensions: 350×350 to 500×500 pixels (square). Some sources cite 350×150px (rectangular). File size: 20-100KB. JPEG/JPG. Must be in running handwriting with black ink. Block capital signatures are rejected. <a href="/compress/to-100kb">Compress your signature</a>.</p>
+
+      <h2>How to prepare</h2>
+      <p>The square photo requirement catches many candidates who reuse SSC/IBPS rectangular photos. Use <a href="/resize/for-upsc">the UPSC resize tool</a> to crop to square, then compress here. For signatures: sign three times with consistent spacing, scan or photograph, crop to include all three, then compress.</p>
+
+      <p class="text-[14px]">Specifications listed here are based on publicly available information as of 2026. Always verify the current requirements from the official exam notification or portal before uploading, as specs can change between recruitment cycles.</p>
+    </section>
+  </Fragment>
+</ToolLayout>

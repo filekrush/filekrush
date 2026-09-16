@@ -1,0 +1,34 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import CompressImage from '../../components/tools/CompressImage';
+---
+
+<ToolLayout
+  title="Compress Photo for PAN Card — Under 50KB | Filekrush"
+  description="Compress photos for PAN card application via NSDL/Protean or UTIITSL. 3.5×2.5cm at 200 DPI, under 50KB, JPEG. Free, no upload."
+  canonical="/compress/for-pan-card"
+  heading="Compress Photo for PAN Card"
+  subheading="3.5 × 2.5cm (276 × 197px at 200 DPI) — under 50KB, JPEG."
+>
+  <CompressImage client:only="react" defaultTargetKB={50} />
+
+  <Fragment slot="content">
+    <section class="prose prose-gray max-w-none">
+      <h2>PAN Card Photo Requirements (NSDL/Protean)</h2>
+      <p>Photo dimensions: 3.5cm height × 2.5cm width at 200 DPI, which equals approximately 276×197 pixels (height×width). This is a landscape/wider format — the opposite of most exam photos. File size: under 50KB. JPEG/JPG only. Colour photo with white or light background. Note: the UTIITSL portal may use slightly different specs (some sources cite 213×213px at 300 DPI). Always check which portal you're applying through.</p>
+
+      <h2>PAN Card Signature Requirements</h2>
+      <p>2cm height × 4.5cm width at 200 DPI, which equals approximately 157×354 pixels (height×width). File size: under 50KB (some sources say under 10KB — check the portal at time of application). JPEG/JPG. Black or dark blue ink on white paper.</p>
+
+      <h2>Common PAN photo mistakes</h2>
+      <ul>
+        <li>Using a portrait photo without adjusting dimensions.</li>
+        <li>Reusing an Aadhaar photo (different aspect ratio).</li>
+        <li>Submitting a PNG file renamed to .jpg (the portal reads file headers, not extensions).</li>
+      </ul>
+      <p>Use <a href="/resize/for-pan-card">the PAN card resize tool</a> for dimensions, and <a href="/convert/png-to-jpg">convert PNG to JPG</a> for format conversion.</p>
+
+      <p class="text-[14px]">Specifications listed here are based on publicly available information as of 2026. Always verify the current requirements from the official exam notification or portal before uploading, as specs can change between recruitment cycles.</p>
+    </section>
+  </Fragment>
+</ToolLayout>

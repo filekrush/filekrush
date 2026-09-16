@@ -1,0 +1,34 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import CompressImage from '../../components/tools/CompressImage';
+---
+
+<ToolLayout
+  title="Compress Photo for SSC Form — 20-50KB, 200x230px | Filekrush"
+  description="Compress photos for SSC CGL, CHSL, MTS, GD exam forms. Exact specs: 200x230 pixels, 20-50KB, JPEG only. Free, no upload."
+  canonical="/compress/for-ssc"
+  heading="Compress Photo for SSC"
+  subheading="200 × 230px, 20–50KB — JPEG, ready to upload."
+>
+  <CompressImage client:only="react" defaultTargetKB={50} />
+
+  <Fragment slot="content">
+    <section class="prose prose-gray max-w-none">
+      <h2>SSC Photo Requirements (2026)</h2>
+      <p>Photo must be 200×230 pixels, 20-50KB, JPEG/JPG only. Applies to CGL, CHSL, MTS, GD, CPO, and Stenographer exams. Must be a recent colour passport-style photo with white background. No spectacles, no caps. SSC now requires a live photo capture through the portal in addition to the uploaded photo.</p>
+
+      <h2>SSC Signature Requirements</h2>
+      <p>Signature must be 10-20KB, JPEG/JPG only. Dimensions vary by notification — commonly cited as 4.0cm(w) × 2.0cm(h) or approximately 140×60 pixels. Must be in running handwriting (cursive), NOT in capital letters. Use black ink on white unruled paper. The signature should fill at least 80% of the box. <a href="/compress/to-20kb">Compress your signature separately</a>.</p>
+
+      <h2>How to prepare your SSC photo</h2>
+      <ol>
+        <li><strong>Resize</strong> to 200×230px — <a href="/resize/for-ssc">use the SSC resize tool</a>.</li>
+        <li><strong>Compress</strong> to under 50KB using this tool.</li>
+        <li><strong>Convert to JPEG</strong> if your file is PNG or HEIC — <a href="/convert/png-to-jpg">convert here</a>.</li>
+        <li><strong>Verify</strong> the file size before uploading.</li>
+      </ol>
+
+      <p class="text-[14px]">Specifications listed here are based on publicly available information as of 2026. Always verify the current requirements from the official exam notification or portal before uploading, as specs can change between recruitment cycles.</p>
+    </section>
+  </Fragment>
+</ToolLayout>

@@ -1,0 +1,40 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import CompressImage from '../../components/tools/CompressImage';
+---
+
+<ToolLayout
+  title="Compress Photo for IBPS Form — 20-50KB, 200x230px | Filekrush"
+  description="Compress photos for IBPS PO, Clerk, SO, RRB exam forms. Exact specs: 200x230 pixels, 20-50KB, JPEG only. Free, no upload."
+  canonical="/compress/for-ibps"
+  heading="Compress Photo for IBPS"
+  subheading="200 × 230px, 20–50KB — JPEG, ready to upload."
+>
+  <CompressImage client:only="react" defaultTargetKB={50} />
+
+  <Fragment slot="content">
+    <section class="prose prose-gray max-w-none">
+      <h2>IBPS Photo Requirements (2026)</h2>
+      <p>Photo must be 200×230 pixels, 20-50KB, JPEG/JPG only. Applies to PO, Clerk, SO, and RRB exams. Recent colour passport-style photo, light or white background. No selfies — use a DSLR or professional photo. Live photo capture also required during registration.</p>
+
+      <h2>IBPS Signature Requirements</h2>
+      <p>140×60 pixels, 10-20KB, JPEG/JPG. Black ink on white paper, running handwriting only. The signature on the form must match all future exam documents.</p>
+
+      <h2>IBPS RRB Additional Requirements</h2>
+      <p>IBPS RRB exams require two extra uploads beyond photo and signature:</p>
+      <ol>
+        <li><strong>Left thumb impression</strong> — 240×240 pixels, 20-50KB, JPEG. Use blue or black ink pad on white paper, ensure the impression is clear and not smudged. <a href="/compress/to-50kb">Compress the thumb impression</a>.</li>
+        <li><strong>Handwritten declaration</strong> — 800×400 pixels, 50-100KB, JPEG. Must be in English, in the candidate's own handwriting, not in capital letters. <a href="/compress/to-100kb">Compress the declaration</a>.</li>
+      </ol>
+
+      <h2>How to prepare</h2>
+      <ol>
+        <li><strong>Resize</strong> first — <a href="/resize/for-ibps">use the IBPS resize tool</a>.</li>
+        <li><strong>Compress</strong> second using this tool.</li>
+        <li><strong>Convert to JPEG</strong> if needed — <a href="/convert/png-to-jpg">convert here</a>.</li>
+      </ol>
+
+      <p class="text-[14px]">Specifications listed here are based on publicly available information as of 2026. Always verify the current requirements from the official exam notification or portal before uploading, as specs can change between recruitment cycles.</p>
+    </section>
+  </Fragment>
+</ToolLayout>
