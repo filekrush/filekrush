@@ -16,6 +16,13 @@ import ResizeImage from '../../components/tools/ResizeImage';
     <section class="prose prose-gray max-w-none">
       <p>These are the UIDAI online update specs: 413×531 pixels at 300 DPI (3.5×4.5cm). Standard passport-style portrait format. After resizing, compress to under 50KB using the <a href="/compress/for-aadhaar">Aadhaar compress tool</a>. Strip EXIF metadata before uploading identity documents with the <a href="/metadata/remover">metadata remover</a>. This is the same aspect ratio as a standard passport photo, so if you already have a passport photo, you mainly need to resize it to the correct pixel dimensions.</p>
 
+      <h2>Common resize mistakes for Aadhaar photos</h2>
+      <ul>
+        <li>Reusing a PAN card photo without adjusting it first. PAN is landscape and Aadhaar is portrait, so a direct resize between the two distorts the image.</li>
+        <li>Skipping the crop-to-fit step on a selfie or group photo — Aadhaar requires just the face, cropped tightly against a white background.</li>
+        <li>Uploading a photo that's the right pixel count but stretched. When the source aspect ratio doesn't match 413×531, use crop-to-fit rather than a plain stretch-resize.</li>
+      </ul>
+
       <p class="text-[14px]">Specifications listed here are based on publicly available information as of 2026. Always verify the current requirements from the official exam notification or portal before uploading, as specs can change between recruitment cycles.</p>
     </section>
   </Fragment>

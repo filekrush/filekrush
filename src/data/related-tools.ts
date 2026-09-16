@@ -17,6 +17,7 @@ export const relatedTools: Record<string, RelatedTool[]> = {
   ],
   compressPdf: [
     { title: 'Compress PDF for Email', href: '/compress-pdf/for-email/' },
+    { title: 'Compress PDF for Government Portal', href: '/compress-pdf/for-government/' },
   ],
   resize: [
     { title: 'Resize Image to 300×300', href: '/resize/to-300x300/' },
@@ -24,6 +25,23 @@ export const relatedTools: Record<string, RelatedTool[]> = {
     { title: 'Resize Image to 800×600', href: '/resize/to-800x600/' },
     { title: 'Resize Image to 1080×1080', href: '/resize/to-1080x1080/' },
     { title: 'Resize Image to 1920×1080', href: '/resize/to-1920x1080/' },
+  ],
+  examCompress: [
+    { title: 'Compress Photo for SSC', href: '/compress/for-ssc/' },
+    { title: 'Compress Photo for IBPS', href: '/compress/for-ibps/' },
+    { title: 'Compress Photo for UPSC', href: '/compress/for-upsc/' },
+    { title: 'Compress Photo for PAN Card', href: '/compress/for-pan-card/' },
+    { title: 'Compress Photo for Aadhaar', href: '/compress/for-aadhaar/' },
+    { title: 'Compress Signature', href: '/compress/signature/' },
+    { title: 'Compress UPSC Signature', href: '/compress/signature-upsc/' },
+    { title: 'Compress Signature for PAN Card', href: '/compress/signature-pan/' },
+  ],
+  examResize: [
+    { title: 'Resize Image for SSC', href: '/resize/for-ssc/' },
+    { title: 'Resize Image for IBPS', href: '/resize/for-ibps/' },
+    { title: 'Resize Image for UPSC', href: '/resize/for-upsc/' },
+    { title: 'Resize Photo for PAN Card', href: '/resize/for-pan-card/' },
+    { title: 'Resize Image for Aadhaar', href: '/resize/for-aadhaar/' },
   ],
   convert: [
     { title: 'Convert HEIC to JPG', href: '/convert/heic-to-jpg/' },
