@@ -1,0 +1,22 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import ResizeImage from '../../components/tools/ResizeImage';
+---
+
+<ToolLayout
+  title="Resize Image to 413x531 for Aadhaar Update Free Online | Filekrush"
+  description="Resize photos to Aadhaar update dimensions: 413x531 pixels at 300 DPI. Crop-to-fit included. Free, no upload."
+  canonical="/resize/for-aadhaar"
+  heading="Resize Image for Aadhaar"
+  subheading="413 × 531px — exact dimensions for Aadhaar online update."
+>
+  <ResizeImage client:only="react" defaultWidth={413} defaultHeight={531} />
+
+  <Fragment slot="content">
+    <section class="prose prose-gray max-w-none">
+      <p>These are the UIDAI online update specs: 413×531 pixels at 300 DPI (3.5×4.5cm). Standard passport-style portrait format. After resizing, compress to under 50KB using the <a href="/compress/for-aadhaar">Aadhaar compress tool</a>. Strip EXIF metadata before uploading identity documents with the <a href="/metadata/remover">metadata remover</a>. This is the same aspect ratio as a standard passport photo, so if you already have a passport photo, you mainly need to resize it to the correct pixel dimensions.</p>
+
+      <p class="text-[14px]">Specifications listed here are based on publicly available information as of 2026. Always verify the current requirements from the official exam notification or portal before uploading, as specs can change between recruitment cycles.</p>
+    </section>
+  </Fragment>
+</ToolLayout>

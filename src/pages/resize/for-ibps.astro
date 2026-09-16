@@ -1,0 +1,22 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import ResizeImage from '../../components/tools/ResizeImage';
+---
+
+<ToolLayout
+  title="Resize Image to 200x230 for IBPS Form Free Online | Filekrush"
+  description="Resize photos to exact IBPS exam dimensions: 200x230 pixels. With crop-to-fit. Free, no upload."
+  canonical="/resize/for-ibps"
+  heading="Resize Image for IBPS"
+  subheading="200 × 230px — exact dimensions for IBPS exam forms."
+>
+  <ResizeImage client:only="react" defaultWidth={200} defaultHeight={230} />
+
+  <Fragment slot="content">
+    <section class="prose prose-gray max-w-none">
+      <p>Same dimensions as SSC. Applies to IBPS PO, Clerk, SO, and RRB exams. After resizing, compress to 20-50KB using the <a href="/compress/for-ibps">IBPS compress tool</a>. IBPS also requires live photo capture during registration — the resized photo is for the scanned upload section. For IBPS RRB: left thumb impression needs 240×240px — use the <a href="/resize/to-300x300">closest preset</a> or custom dimensions.</p>
+
+      <p class="text-[14px]">Specifications listed here are based on publicly available information as of 2026. Always verify the current requirements from the official exam notification or portal before uploading, as specs can change between recruitment cycles.</p>
+    </section>
+  </Fragment>
+</ToolLayout>

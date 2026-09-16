@@ -1,0 +1,22 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import ResizeImage from '../../components/tools/ResizeImage';
+---
+
+<ToolLayout
+  title="Resize Image to 350x350 for UPSC Form Free Online | Filekrush"
+  description="Resize photos to UPSC square format: 350x350 pixels minimum. Crop-to-fit makes any photo square. Free, no upload."
+  canonical="/resize/for-upsc"
+  heading="Resize Image for UPSC"
+  subheading="350 × 350px — square format for UPSC applications."
+>
+  <ResizeImage client:only="react" defaultWidth={350} defaultHeight={350} />
+
+  <Fragment slot="content">
+    <section class="prose prose-gray max-w-none">
+      <p>UPSC requires square photos, unlike SSC/IBPS which use 200×230 (portrait). The accepted range is 350×350 to 1000×1000 pixels. 350×350 is the safe minimum. The crop-to-fit tool is critical here — most photos are rectangular, and this tool lets you select which part of the photo to keep in the square frame. After resizing, compress to 20-300KB using the <a href="/compress/for-upsc">UPSC compress tool</a>. Face should cover approximately 75% of the frame.</p>
+
+      <p class="text-[14px]">Specifications listed here are based on publicly available information as of 2026. Always verify the current requirements from the official exam notification or portal before uploading, as specs can change between recruitment cycles.</p>
+    </section>
+  </Fragment>
+</ToolLayout>

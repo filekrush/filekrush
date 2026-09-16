@@ -1,0 +1,22 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import ResizeImage from '../../components/tools/ResizeImage';
+---
+
+<ToolLayout
+  title="Resize Image to 200x230 for SSC Form Free Online | Filekrush"
+  description="Resize photos to exact SSC exam dimensions: 200x230 pixels. With crop-to-fit for perfect aspect ratio. Free, no upload."
+  canonical="/resize/for-ssc"
+  heading="Resize Image for SSC"
+  subheading="200 × 230px — exact dimensions for SSC exam forms."
+>
+  <ResizeImage client:only="react" defaultWidth={200} defaultHeight={230} />
+
+  <Fragment slot="content">
+    <section class="prose prose-gray max-w-none">
+      <p>This is the standard dimension for SSC CGL, CHSL, MTS, GD, CPO, and Stenographer exams. The 200×230px format is a roughly 7:8 portrait ratio. After resizing, compress to 20-50KB using the <a href="/compress/for-ssc">SSC compress tool</a>. Convert to JPEG if needed with the <a href="/convert/png-to-jpg">PNG to JPG converter</a>. The crop-to-fit tool is especially useful since phone photos have a different aspect ratio than 200×230.</p>
+
+      <p class="text-[14px]">Specifications listed here are based on publicly available information as of 2026. Always verify the current requirements from the official exam notification or portal before uploading, as specs can change between recruitment cycles.</p>
+    </section>
+  </Fragment>
+</ToolLayout>

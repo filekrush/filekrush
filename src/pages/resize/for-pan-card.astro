@@ -1,0 +1,22 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import ResizeImage from '../../components/tools/ResizeImage';
+---
+
+<ToolLayout
+  title="Resize Photo to 276x197 for PAN Card Free Online | Filekrush"
+  description="Resize photos to PAN card dimensions: 276 height × 197 width pixels (3.5×2.5cm at 200 DPI). Free, no upload."
+  canonical="/resize/for-pan-card"
+  heading="Resize Photo for PAN Card"
+  subheading="276 × 197px (3.5 × 2.5cm at 200 DPI) — for NSDL/Protean portal."
+>
+  <ResizeImage client:only="react" defaultWidth={197} defaultHeight={276} />
+
+  <Fragment slot="content">
+    <section class="prose prose-gray max-w-none">
+      <p>PAN card photos via NSDL/Protean use a landscape-style wider format: 3.5cm height × 2.5cm width. At 200 DPI, this is approximately 276 pixels height × 197 pixels width. This is unusual — most Indian government forms use taller-than-wide portrait photos. The crop tool handles this transition. Note: UTIITSL portal may use different dimensions (213×213px at 300 DPI). Verify which portal you're using. After resizing, compress to under 50KB using the <a href="/compress/for-pan-card">PAN card compress tool</a>.</p>
+
+      <p class="text-[14px]">Specifications listed here are based on publicly available information as of 2026. Always verify the current requirements from the official exam notification or portal before uploading, as specs can change between recruitment cycles.</p>
+    </section>
+  </Fragment>
+</ToolLayout>
