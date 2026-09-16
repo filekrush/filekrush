@@ -1,0 +1,36 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import CompressImage from '../../components/tools/CompressImage';
+---
+
+<ToolLayout
+  title="Compress UPSC Signature — Triple Signature, 20-100KB | Filekrush"
+  description="Compress the UPSC triple-signature image to 20-100KB. 350-500px, JPEG. Free, no upload."
+  canonical="/compress/signature-upsc"
+  heading="Compress UPSC Signature"
+  subheading="Triple signature image, 350–500px, 20–100KB — ready for UPSC forms."
+>
+  <CompressImage client:only="react" defaultTargetKB={100} />
+
+  <Fragment slot="content">
+    <section class="prose prose-gray max-w-none">
+      <h2>The UPSC triple signature requirement</h2>
+      <p>UPSC requires candidates to sign THREE times vertically (one below the other) on a single plain white sheet using black ink. All three signatures must be scanned as ONE image. This is unique to UPSC — no other major exam requires this.</p>
+
+      <h2>Dimensions</h2>
+      <p>The combined image must be between 350×350 and 500×500 pixels (square format). Some sources cite 350×150px (rectangular). File size: 20-100KB. JPEG/JPG only.</p>
+
+      <h2>How to prepare</h2>
+      <ol>
+        <li>Sign three times with consistent spacing on white unruled paper.</li>
+        <li>Use black ink pen.</li>
+        <li>Photograph or scan the full set.</li>
+        <li>Crop to include all three signatures with minimal white border.</li>
+        <li>Compress to 20-100KB using this tool.</li>
+      </ol>
+      <p>See the <a href="/compress/for-upsc">UPSC photo compress tool</a> for the photo requirement.</p>
+
+      <p class="text-[14px]">Specifications listed here are based on publicly available information as of 2026. Always verify the current requirements from the official exam notification or portal before uploading, as specs can change between recruitment cycles.</p>
+    </section>
+  </Fragment>
+</ToolLayout>

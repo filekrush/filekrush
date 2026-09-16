@@ -1,0 +1,28 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import CompressImage from '../../components/tools/CompressImage';
+---
+
+<ToolLayout
+  title="Compress Signature for PAN Card — Under 50KB | Filekrush"
+  description="Compress signatures for PAN card application. 2cm × 4.5cm at 200 DPI (157×354px), under 50KB, JPEG. Free, no upload."
+  canonical="/compress/signature-pan"
+  heading="Compress Signature for PAN Card"
+  subheading="157 × 354px (2 × 4.5cm at 200 DPI) — under 50KB, JPEG."
+>
+  <CompressImage client:only="react" defaultTargetKB={50} />
+
+  <Fragment slot="content">
+    <section class="prose prose-gray max-w-none">
+      <h2>PAN signature specs</h2>
+      <p>The NSDL/Protean portal requires signatures at 2cm height × 4.5cm width at 200 DPI, which equals approximately 157 pixels height × 354 pixels width. File size: under 50KB. JPEG/JPG only. Black or dark blue ink on white paper.</p>
+
+      <h2>Note on file size limits</h2>
+      <p>Some sources cite under 10KB as the limit for PAN signatures — this may vary between NSDL and UTIITSL portals and between application cycles. Under 50KB is the safe upper bound; compressing to 20KB or less ensures acceptance on either portal.</p>
+
+      <p>See the <a href="/compress/for-pan-card">PAN card photo compress tool</a> and the <a href="/resize">resize tool</a> for dimension adjustment.</p>
+
+      <p class="text-[14px]">Specifications listed here are based on publicly available information as of 2026. Always verify the current requirements from the official exam notification or portal before uploading, as specs can change between recruitment cycles.</p>
+    </section>
+  </Fragment>
+</ToolLayout>

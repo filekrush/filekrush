@@ -1,0 +1,35 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import CompressImage from '../../components/tools/CompressImage';
+---
+
+<ToolLayout
+  title="Compress Signature to 10-20KB for Exam Forms Free | Filekrush"
+  description="Compress scanned signatures to 10-20KB for SSC, IBPS, and other exam forms. JPEG only. Free, no upload."
+  canonical="/compress/signature"
+  heading="Compress Signature"
+  subheading="10–20KB — ready for SSC, IBPS, and government exam forms."
+>
+  <CompressImage client:only="react" defaultTargetKB={20} />
+
+  <Fragment slot="content">
+    <section class="prose prose-gray max-w-none">
+      <h2>Why signatures compress differently</h2>
+      <p>Signatures are thin, high-contrast lines on white background. Standard compression algorithms can blur these lines, making the signature illegible. JPEG quality of 70-80% typically preserves line clarity while hitting the 10-20KB target.</p>
+
+      <h2>Requirements across exams</h2>
+      <p>SSC: 10-20KB, JPEG, approximately 4.0cm(w) × 2.0cm(h) or ~140×60px. IBPS: 10-20KB, JPEG, 140×60px. Both require black ink, running handwriting (NOT capital letters), white unruled paper.</p>
+
+      <h2>Tips for a clean signature scan</h2>
+      <ul>
+        <li>Use a thick black ink pen (not ballpoint) for better contrast.</li>
+        <li>Sign large on white A4 paper.</li>
+        <li>Photograph in good lighting or scan at 200+ DPI.</li>
+        <li>Crop tightly — less white space means smaller file and sharper result. The signature should fill at least 80% of the frame.</li>
+      </ul>
+      <p>Get dimensions right first with the <a href="/resize">resize tool</a>. See exam-specific guides: <a href="/compress/for-ssc">Compress for SSC</a>, <a href="/compress/for-ibps">Compress for IBPS</a>.</p>
+
+      <p class="text-[14px]">Specifications listed here are based on publicly available information as of 2026. Always verify the current requirements from the official exam notification or portal before uploading, as specs can change between recruitment cycles.</p>
+    </section>
+  </Fragment>
+</ToolLayout>
