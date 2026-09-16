@@ -1,0 +1,28 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import CompressPdf from '../../components/tools/CompressPdf.tsx';
+---
+
+<ToolLayout
+  title="Compress PDF for Government Portal Upload Free | Filekrush"
+  description="Compress PDFs to meet government portal upload limits. Works for DigiLocker, income tax, visa applications. Free, no upload."
+  canonical="/compress-pdf/for-government"
+  heading="Compress PDF for Government Portal"
+  subheading="Reduce PDF size for government uploads — free, private, instant."
+>
+  <CompressPdf client:only="react" defaultLevel="low" />
+
+  <Fragment slot="content">
+    <section class="prose prose-gray max-w-none">
+      <h2>Common government PDF upload limits</h2>
+      <p>Income tax e-filing portal: typically 1-5MB per document. DigiLocker: varies by document type. Visa application portals: usually 2-5MB. State government portals: often 1-2MB. Scanned documents from phone cameras are commonly 10-50MB — far over these limits.</p>
+
+      <h2>How it works</h2>
+      <p>This tool renders each page of your PDF as an image and rebuilds the PDF at a smaller size. Choose Maximum compression for the smallest file. Note: compressed PDFs will have image-based pages (text won't be selectable), which is fine for scanned documents.</p>
+
+      <p>Need to combine documents first? Use <a href="/image-to-pdf/documents">combine documents into one PDF</a>, then compress here.</p>
+
+      <p class="text-[14px]">Specifications listed here are based on publicly available information as of 2026. Always verify the current requirements from the official portal before uploading.</p>
+    </section>
+  </Fragment>
+</ToolLayout>

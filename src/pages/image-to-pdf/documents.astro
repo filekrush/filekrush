@@ -1,0 +1,32 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import ImageToPdf from '../../components/tools/ImageToPdf';
+---
+
+<ToolLayout
+  title="Combine Documents Into One PDF — Aadhaar, PAN, Marksheets | Filekrush"
+  description="Combine multiple scanned documents (Aadhaar, PAN, marksheets, certificates) into a single PDF. Free, no upload, runs in your browser."
+  canonical="/image-to-pdf/documents"
+  heading="Combine Documents Into One PDF"
+  subheading="Merge Aadhaar, PAN, marksheets, and certificates into a single PDF."
+>
+  <ImageToPdf client:only="react" />
+
+  <Fragment slot="content">
+    <section class="prose prose-gray max-w-none">
+      <h2>When you need this</h2>
+      <p>Visa applications, university admissions, job applications, bank account opening, and government processes often require all documents combined in a single PDF.</p>
+
+      <h2>Typical documents to combine</h2>
+      <p>Aadhaar card (front and back), PAN card, 10th marksheet, 12th marksheet, degree certificate, experience letters, bank statements, passport first and last page, caste/income/domicile certificates.</p>
+
+      <h2>Tips</h2>
+      <p>Scan or photograph each document in order. Check each image for clarity before combining. Use the A4 page size for standard documents. After combining, compress the final PDF if it's too large — see <a href="/compress-pdf/for-government">compress PDF for government</a>.</p>
+
+      <h2>Privacy</h2>
+      <p>All processing happens in your browser. Your identity documents are never uploaded to any server.</p>
+
+      <p class="text-[14px]">Specifications listed here are based on publicly available information as of 2026. Always verify the current requirements from the official portal before uploading.</p>
+    </section>
+  </Fragment>
+</ToolLayout>
