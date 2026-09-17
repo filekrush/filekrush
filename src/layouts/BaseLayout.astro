@@ -23,6 +23,8 @@ const canonicalUrl = canonical ? `${siteUrl}${canonical.endsWith('/') ? canonica
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />
 
+    <link rel="preload" href="/fonts/vend-sans-latin.woff2" as="font" type="font/woff2" crossorigin />
+
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalUrl} />
