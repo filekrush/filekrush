@@ -36,17 +36,25 @@ const canonicalUrl = canonical ? `${siteUrl}${canonical.endsWith('/') ? canonica
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0YT680XGJG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-0YT680XGJG');
-</script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-0YT680XGJG');
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Vend+Sans:wght@500;600&display=swap" rel="stylesheet" />
+      function loadGtm() {
+        if (window.__gtmLoaded) return;
+        window.__gtmLoaded = true;
+        const script = document.createElement('script');
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-0YT680XGJG';
+        script.async = true;
+        document.head.appendChild(script);
+      }
+      ['scroll', 'keydown', 'click', 'touchstart', 'mousemove'].forEach((event) =>
+        window.addEventListener(event, loadGtm, { once: true, passive: true })
+      );
+      setTimeout(loadGtm, 5000);
+    </script>
   </head>
   <body class="min-h-screen flex flex-col">
     <Header />
