@@ -1,0 +1,95 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const examGroups = [
+  {
+    title: 'Aadhaar & PAN Card',
+    items: [
+      { label: 'Compress Photo for Aadhaar', href: '/compress/for-aadhaar/' },
+      { label: 'Resize Photo for Aadhaar', href: '/resize/for-aadhaar/' },
+      { label: 'Compress Photo for PAN Card', href: '/compress/for-pan-card/' },
+      { label: 'Resize Photo for PAN Card', href: '/resize/for-pan-card/' },
+      { label: 'Compress Signature for PAN Card', href: '/compress/signature-pan/' },
+    ],
+  },
+  {
+    title: 'SSC Exams',
+    items: [
+      { label: 'Compress Photo for SSC (20-50KB)', href: '/compress/for-ssc/' },
+      { label: 'Resize Photo for SSC (200×230px)', href: '/resize/for-ssc/' },
+      { label: 'SSC CGL Photo & Signature Guide', href: '/blog/ssc-cgl-photo-signature-upload-guide' },
+    ],
+  },
+  {
+    title: 'IBPS Exams',
+    items: [
+      { label: 'Compress Photo for IBPS (20-50KB)', href: '/compress/for-ibps/' },
+      { label: 'Resize Photo for IBPS (200×230px)', href: '/resize/for-ibps/' },
+      { label: 'IBPS PO Photo, Signature & Thumb Guide', href: '/blog/ibps-po-photo-signature-thumb-declaration' },
+    ],
+  },
+  {
+    title: 'UPSC Exams',
+    items: [
+      { label: 'Compress Photo for UPSC (20-300KB)', href: '/compress/for-upsc/' },
+      { label: 'Resize Photo for UPSC (350×350)', href: '/resize/for-upsc/' },
+      { label: 'Compress UPSC Signature', href: '/compress/signature-upsc/' },
+    ],
+  },
+  {
+    title: 'NEET, JEE, GATE & RRB',
+    items: [
+      { label: 'Photo & Signature Size Guide', href: '/blog/photo-signature-size-neet-jee-gate-rrb' },
+      { label: 'Compress Signature (10-20KB)', href: '/compress/signature/' },
+    ],
+  },
+  {
+    title: 'Documents & Portals',
+    items: [
+      { label: 'Compress PDF for Government Portal', href: '/compress-pdf/for-government/' },
+      { label: 'Compress Photo for Government Form', href: '/compress/for-government/' },
+      { label: 'Indian Passport Photo (51×51mm)', href: '/passport-photo/india/' },
+    ],
+  },
+];
+---
+
+<BaseLayout
+  title="Photo & Document Size Guide for Indian Exams & Govt Forms | Filekrush"
+  description="Compress and resize photos, signatures, and PDFs to the exact specs for Aadhaar, PAN, SSC, IBPS, UPSC, NEET, JEE, GATE, RRB and other Indian government portals. Free, no upload."
+  canonical="/exams"
+>
+  <section class="max-w-[990px] mx-auto px-6 pt-12 sm:pt-20 pb-4 sm:pb-8">
+    <h1 class="text-4xl sm:text-[56px] font-semibold leading-tight" style="color: var(--text-primary);">
+      Exam & Government Form Photos
+    </h1>
+    <p class="text-xl sm:text-[28px] mt-4" style="color: var(--text-secondary);">
+      Exact photo, signature, and document specs for Aadhaar, PAN, SSC, IBPS, UPSC, NEET, JEE, GATE, RRB and more — free, in your browser.
+    </p>
+  </section>
+
+  <section class="max-w-[990px] mx-auto px-6 pb-20 pt-6 sm:pt-10">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {examGroups.map(group => (
+        <div class="bg-[var(--bg-card)] px-6 py-6">
+          <h2 class="text-[18px] font-semibold mb-4" style="color: var(--text-primary);">{group.title}</h2>
+          <ul class="space-y-2">
+            {group.items.map(item => (
+              <li>
+                <a href={item.href} class="text-[15px] underline underline-offset-2" style="color: var(--text-secondary);">
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+
+    <p class="text-[16px] mt-10" style="color: var(--text-secondary);">
+      Not sure which size you need? Every portal has its own limits — see the full
+      <a href="/compress/for-government/" class="underline">government forms compression guide</a>
+      or check your exam's guide in the <a href="/blog" class="underline">blog</a>.
+    </p>
+  </section>
+</BaseLayout>

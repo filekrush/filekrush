@@ -1,6 +1,15 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
+const examLinks = [
+  { title: 'Aadhaar Photo', desc: '413×531px, exact KB', href: '/compress/for-aadhaar/' },
+  { title: 'PAN Card Photo', desc: '276×197px, under 50KB', href: '/compress/for-pan-card/' },
+  { title: 'SSC Photo & Signature', desc: '200×230px, 20-50KB', href: '/compress/for-ssc/' },
+  { title: 'IBPS Photo & Signature', desc: '200×230px, 20-50KB', href: '/compress/for-ibps/' },
+  { title: 'UPSC Photo & Signature', desc: '350×350px, 20-300KB', href: '/compress/for-upsc/' },
+  { title: 'Indian Passport Photo', desc: '51×51mm, white background', href: '/passport-photo/india/' },
+];
+
 const tools = [
   { title: 'Compress Image', desc: 'Reduce image size to exact KB', href: '/compress', icon: '/icons/compress.svg' },
   { title: 'Compress PDF', desc: 'Reduce PDF file size', href: '/compress-pdf', icon: '/icons/compress-pdf.svg' },
@@ -13,27 +22,47 @@ const tools = [
 ---
 
 <BaseLayout
-  title="Filekrush — Free Browser-Based File Tools"
-  description="Compress, resize, convert images and PDFs. Everything runs in your browser. No upload, no signup, no limits."
+  title="Filekrush — Photo & Document Prep for Indian Exams & Govt Forms"
+  description="Compress and resize photos, signatures, and PDFs to the exact specs for Aadhaar, PAN, SSC, IBPS, UPSC and other Indian government forms — plus general image and PDF tools. Everything runs in your browser."
   canonical="/"
 >
   <section class="max-w-[990px] mx-auto px-6 pt-8 sm:pt-24 pb-4 sm:pb-8">
-    <h1 class="text-[36px] sm:text-[60px] font-semibold leading-tight flex flex-wrap items-center gap-x-3 sm:gap-x-5">
-      <img src="/icons/hero-1.svg" alt="" class="w-[30px] h-[30px] sm:w-[49px] sm:h-[49px] inline-block" />
-      <span>Compress</span>
-      <img src="/icons/hero-2.svg" alt="" class="w-[30px] h-[30px] sm:w-[49px] sm:h-[49px] inline-block" />
-      <span>Resize</span>
-      <img src="/icons/hero-3.svg" alt="" class="w-[30px] h-[30px] sm:w-[49px] sm:h-[49px] inline-block" />
-      <span>Convert</span>
-      <span>files in your browser.</span>
+    <h1 class="text-[32px] sm:text-[56px] font-semibold leading-tight" style="color: var(--text-primary);">
+      Photos & documents, ready for<br class="hidden sm:block" /> Indian exams and government forms.
     </h1>
 
-    <p class="text-2xl sm:text-[36px] mt-4" style="color: var(--text-secondary);">
-      No Uploads. No Signups.
+    <p class="text-xl sm:text-[30px] mt-4" style="color: var(--text-secondary);">
+      Aadhaar, PAN, SSC, IBPS, UPSC and more — exact size, every time. No uploads, no signups.
     </p>
   </section>
 
-  <section class="max-w-[990px] mx-auto px-6 pb-20 pt-4 sm:pt-10">
+  <section class="max-w-[990px] mx-auto px-6 pb-16 pt-4 sm:pt-10">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {examLinks.map(item => (
+        <a
+          href={item.href}
+          class="group block bg-[var(--bg-card)] px-6 py-6 transition-all duration-200 hover:bg-[var(--bg-card-hover)]"
+        >
+          <h2 class="text-[20px] text-[var(--text-primary)] group-hover:text-[var(--text-inverse)] transition-colors duration-200">
+            {item.title}
+          </h2>
+          <p class="text-[15px] text-[var(--text-secondary)] group-hover:text-[var(--text-secondary)] transition-colors duration-200">
+            {item.desc}
+          </p>
+        </a>
+      ))}
+    </div>
+    <p class="text-[15px] mt-4">
+      <a href="/exams" class="underline underline-offset-2" style="color: var(--text-secondary);">
+        See all exams and government forms →
+      </a>
+    </p>
+  </section>
+
+  <section class="max-w-[990px] mx-auto px-6 pb-20 pt-4 sm:pt-6 border-t" style="border-color: var(--brand-light);">
+    <p class="text-[13px] font-semibold uppercase tracking-wide mt-10 mb-6" style="color: var(--text-secondary);">
+      All tools
+    </p>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       {tools.map(tool => (
         <a

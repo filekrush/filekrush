@@ -1,18 +1,69 @@
 ---
 const currentYear = new Date().getFullYear();
+
+const columns = [
+  {
+    title: 'Exams & Govt Forms',
+    links: [
+      { label: 'All Exams & Forms', href: '/exams' },
+      { label: 'Aadhaar Photo', href: '/compress/for-aadhaar/' },
+      { label: 'PAN Card Photo', href: '/compress/for-pan-card/' },
+      { label: 'SSC Photo & Signature', href: '/compress/for-ssc/' },
+      { label: 'IBPS Photo & Signature', href: '/compress/for-ibps/' },
+      { label: 'UPSC Photo & Signature', href: '/compress/for-upsc/' },
+      { label: 'Indian Passport Photo', href: '/passport-photo/india/' },
+    ],
+  },
+  {
+    title: 'Tools',
+    links: [
+      { label: 'Compress Image', href: '/compress' },
+      { label: 'Compress PDF', href: '/compress-pdf' },
+      { label: 'Resize Image', href: '/resize' },
+      { label: 'Convert Format', href: '/convert' },
+      { label: 'Passport Photo', href: '/passport-photo' },
+      { label: 'Image to PDF', href: '/image-to-pdf' },
+      { label: 'Metadata Tool', href: '/metadata' },
+    ],
+  },
+  {
+    title: 'Company',
+    links: [
+      { label: 'Blog', href: '/blog' },
+      { label: 'Privacy', href: '/privacy' },
+      { label: 'Terms', href: '/terms' },
+    ],
+  },
+];
 ---
 
 <footer class="bg-[var(--bg)]">
-  <div class="max-w-[990px] mx-auto px-6 py-10 border-t border-[#e0e0e0]">
-    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-      <p class="text-[14px]" style="color: var(--text-secondary);">
-        &copy; {currentYear} Filekrush. All files processed in your browser. Nothing is uploaded.
-      </p>
-      <div class="flex gap-6 text-[14px]" style="color: var(--text-secondary);">
-        <a href="/blog" class="hover:text-[var(--text-primary)] transition-colors">Blog</a>
-        <a href="/privacy" class="hover:text-[var(--text-primary)] transition-colors">Privacy</a>
-        <a href="/terms" class="hover:text-[var(--text-primary)] transition-colors">Terms</a>
-      </div>
+  <div class="max-w-[990px] mx-auto px-6 pt-14 pb-10 border-t border-[#e0e0e0]">
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-8 mb-10">
+      {columns.map(column => (
+        <div>
+          <p class="text-[13px] font-semibold uppercase tracking-wide mb-4" style="color: var(--text-primary);">
+            {column.title}
+          </p>
+          <ul class="space-y-2">
+            {column.links.map(link => (
+              <li>
+                <a
+                  href={link.href}
+                  class="text-[14px] hover:text-[var(--text-primary)] transition-colors"
+                  style="color: var(--text-secondary);"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
     </div>
+
+    <p class="text-[14px] pt-6 border-t border-[#e0e0e0]" style="color: var(--text-secondary);">
+      &copy; {currentYear} Filekrush. All files processed in your browser. Nothing is uploaded.
+    </p>
   </div>
 </footer>
